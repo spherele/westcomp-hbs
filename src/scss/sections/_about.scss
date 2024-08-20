@@ -1,0 +1,183 @@
+.about {
+  > .container {
+    display: flex;
+    gap: 50px;
+
+    @include max-width($breakpoint-md) {
+      flex-direction: column;
+    }
+
+    @include max-width($breakpoint-xxs-2) {
+      row-gap: 30px;
+    }
+  }
+
+  @include max-width($breakpoint-lg) {
+    padding-bottom: 100px;
+    padding-top: 0;
+  }
+
+  @include max-width($breakpoint-md) {
+    padding-bottom: 80px;
+  }
+
+  @include max-width($breakpoint-sm) {
+    padding-bottom: 60px;
+  }
+
+  &-video {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    &__icon {
+      position: absolute;
+      z-index: 1;
+
+      top: 50%;
+      right: 50%;
+
+      padding: 30px;
+      translate: 50% -50%;
+
+      border-radius: 100%;
+      background-color: #FFF;
+
+      cursor: pointer;
+      user-select: none;
+
+      svg {
+        width: 40px;
+        height: 40px;
+        translate: 5px 0;
+      }
+    }
+
+    &__control {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+
+  &-body {
+    width: 100%;
+
+    &__title {
+      margin-block: 0;
+
+      font-size: 32px;
+      font-weight: 700;
+
+      color: #0F6DA1;
+
+      @include max-width($breakpoint-sm) {
+        font-size: 30px;
+      }
+
+      @include max-width($breakpoint-xxs-2) {
+        font-size: 20px;
+      }
+    }
+
+    &__description {
+      margin-block: 25px 0;
+
+      font-size: 14px;
+      line-height: 200%;
+
+      color: #636363;
+
+      @include max-width($breakpoint-xxs-2) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    @include max-width($breakpoint-lg) {
+      flex-direction: column-reverse;
+    }
+
+    &-left,
+    &-right {
+      width: 50%;
+
+      @include max-width($breakpoint-lg) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      padding-right: 20px;
+
+      @include max-width($breakpoint-lg) {
+        margin-top: 40px;
+      }
+
+      @include max-width($breakpoint-sm) {
+        padding-right: 10px;
+      }
+
+      .video {
+        max-width: 752px;
+        width: 100%;
+        box-shadow: 24px 24px 0px 0px rgba(15, 109, 161, 1);
+
+        @include max-width($breakpoint-sm) {
+          box-shadow: 10px 10px 0px 0px rgba(15, 109, 161, 1);
+        }
+      }
+    }
+
+    &-right {
+      padding-left: 20px;
+
+      @include max-width($breakpoint-lg) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: var(--blue);
+
+    @include max-width($breakpoint-md) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--gray-600);
+
+    @include max-width($breakpoint-sm) {
+      line-height: 24px;
+    }
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin: 0 0 16px;
+
+        @include max-width($breakpoint-sm) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

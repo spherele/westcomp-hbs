@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="catalog-general-page">
+      <div class="container">
+        <div class="catalog-general-page__breadcrumbs breadcrumbs">
+          <a class="breadcrumbs__item" href="/">Главная</a>
+          <div class="breadcrumbs__separator">/</div>
+          <span class="breadcrumbs__item breadcrumbs__item_active">Корзина</span>
+        </div>
+        <h1 class="catalog-general-page__title">Каталог</h1>
+        <div class="catalog-general-page__cards">
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/jA1O8Lt.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">Серверы HPE ProLiant DL</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/izcMMPC.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-left">HPE BladeSystem</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/1EJkmRm.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">HPE Synergy</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/jUXp5WP.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-left">HPE 3PAR StoreServ</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/VwX8t8r.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-left">HPE Moonshot</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/odqDJU6.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-right">HPE Apollo</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/dUZ12DN.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">HPE Networking</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/xevGuZL.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">HPE SAN Switch</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/O7I3zIn.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-left">Ноутбуки HP</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/kYTIf1f.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-left">Серверные комплектующие</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/oenVRR4.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-right">Системы хранения</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/ITAPhEE.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_bottom-left">Маршрутизаторы</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/NCdkrYE.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">Коммутаторы</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/1MmwygX.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">Блейд-системы IBM</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/yFNO5RW.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">Распределители питания</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/6FtEcKB.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-left">Трансиверы</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/mPpN9NW.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-left">Готовые решения</div>
+          </a>
+          <a class="catalog-general-page-card" href="#" style="background-image: url(https://i.imgur.com/6rbMyy5.png);">
+            <div class="catalog-general-page-card__text catalog-general-page-card__text_top-right">Опции для серверных шкафов</div>
+          </a>
+        </div>
+        <script>
+          const colors = [
+            '#EDFFFA',
+            '#DBFAFF',
+            '#E8EFFF',
+            '#FFFEE5',
+            '#F2F2F2',
+            '#FFECEB'
+          ];
+
+          document.querySelectorAll('.catalog-general-page-card').forEach(card => {
+            card.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          });
+        </script>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

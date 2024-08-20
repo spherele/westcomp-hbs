@@ -1,0 +1,91 @@
+// Extensions - Расширения
+@import 'extensions/reset';
+
+// Libs - Библиотеки
+@import 'libs/libs';
+
+// Utils - Утилиты
+@import 'utils/functions';
+@import 'utils/mixins';
+
+// Variables - Переменные
+@import 'variables/colors';
+@import 'variables/variables';
+
+// Global - Глобальное
+@import 'global/root';
+@import 'global/fonts';
+@import 'global/global';
+@import 'global/typography';
+@import 'global/animations';
+@import 'global/scrollbar';
+
+// UI - Пользовательский интерфейс
+@import 'ui/button';
+@import 'ui/input';
+@import 'ui/checkbox';
+@import 'ui/radio';
+@import 'ui/switch';
+@import 'ui/ul';
+@import 'ui/badge';
+
+// Components - Компоненты
+@import 'components/dropdown';
+@import 'components/select';
+@import 'components/modal';
+@import 'components/tooltip';
+@import 'components/tabs';
+@import 'components/accordion';
+@import 'components/advantage';
+@import 'components/card-service';
+@import 'components/gear-decor-animate';
+@import 'components/card-product';
+@import 'components/slider';
+@import 'components/video';
+@import 'components/tag';
+@import 'components/hero-slide';
+@import 'components/nav';
+@import 'components/input-search';
+@import 'components/footer-nav-cell';
+@import 'components/burger';
+@import 'components/breadcrumbs';
+@import 'components/products-cards-slider';
+@import 'components/course-card';
+@import 'components/catalog-menu';
+@import 'components/pagination';
+@import 'components/hamburger-menu';
+@import 'components/catalog-popup';
+@import 'components/form';
+
+//
+// @import 'components/modals/example';
+
+// Layouts - Компоновка
+@import 'layouts/layouts';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Sections - Секции
+@import 'sections/advantages';
+@import 'sections/services';
+@import 'sections/configurator';
+@import 'sections/special-offers';
+@import 'sections/about';
+@import 'sections/tags';
+@import 'sections/hero';
+@import 'sections/filters';
+@import 'sections/accordion-menus';
+@import 'sections/more-about-us';
+
+// Pages - Страницы
+@import 'pages/catalog';
+@import 'pages/product-page';
+@import 'pages/profile';
+@import 'pages/cart';
+@import 'pages/educational-center';
+@import 'pages/about-us';
+@import 'pages/catalog-general';
+@import 'pages/contacts';
+@import 'pages/news';
+@import 'pages/configurator-product';
+@import 'pages/test2';

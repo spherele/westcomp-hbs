@@ -1,0 +1,27 @@
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--white);
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    width: 14px;
+  }
+}
+
+.arrow-slider-left {
+  margin-right: 3px;
+}
+
+.arrow-slider-right {
+  margin-left: 3px;
+}

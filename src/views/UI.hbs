@@ -1,0 +1,2988 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+  <head>
+    {{> layouts/head }}
+
+    <title>{{ title }}</title>
+
+    <style>
+      .gui {
+        position: fixed;
+        background-color: var(--white);
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0 10px rgba(var(--black-rgb), 0.25);
+        z-index: 10;
+        right: 1rem;
+        bottom: 1rem;
+        border-radius: 4px;
+      }
+
+      .sitemap-section .container > div > div:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      table:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      table td,
+      table th {
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      table td {
+        border: 1px dashed var(--gray-100);
+      }
+
+      table td > div:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      table td > div .button {
+        width: 100%;
+        margin: 0;
+      }
+
+      table td > div .button-icon {
+        width: auto;
+      }
+
+      table td > .input-wrapper {
+        margin: 0;
+      }
+
+      table td > .dropdown {
+        margin: 0;
+      }
+
+      table td > .select {
+        margin: 0;
+      }
+
+      table td > .select.select--flat {
+        width: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      {{> layouts/header }}
+
+      <main>
+        <section class="sitemap-section">
+          <div class="container">
+            <!-- GUI -->
+            <div class="gui">
+              <label class="switcher switcher--theme" data-tippy="Тема">
+                <input data-theme-switcher class="switcher__input" type="checkbox" />
+                <div class="switcher__wrap">
+                  <div class="switcher__custom-wrapper">
+                    <div class="switcher__custom"> </div>
+                  </div>
+
+                  <p class="switcher__text"> Тема </p>
+                </div>
+              </label>
+            </div>
+
+            <div>
+              <!-- Typography -->
+              <div>
+                <h2 style="text-align: center"> Typography </h2>
+
+                <div style="margin: 20px">
+                  <h1 class="h1">Title H-1</h1>
+                  <h2 class="h2">Title H-2</h2>
+                  <h3 class="h3">Title H-3</h3>
+                  <h4 class="h4">Title H-4</h4>
+                  <h5 class="h5">Title H-5</h5>
+                  <h6 class="h6">Title H-6</h6>
+                </div>
+
+                <div style="margin: 20px">
+                  <h1 class="h2">Title H-1 (H-2)</h1>
+                  <h2 class="h3">Title H-2 (H-3)</h2>
+                  <h3 class="h4">Title H-3 (H-4)</h3>
+                  <h4 class="h5">Title H-4 (H-5)</h4>
+                  <h5 class="h6">Title H-5 (H-6)</h5>
+                  <h6 class="h6">Title H-6 (H-6)</h6>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div>
+                <h2 style="text-align: center"> Buttons </h2>
+
+                <table>
+                  <caption> <h3> Размер </h3> </caption>
+
+                  <thead>
+                    <tr>
+                      <th> Здоровая </th>
+
+                      <th> Большая </th>
+
+                      <th> Средняя </th>
+
+                      <th> Стандартная </th>
+
+                      <th> Маленькая </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <button class="button button--large" type="button">
+                          <svg>
+                            <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                          </svg>
+
+                          <span> Large button 64 </span>
+                        </button>
+                      </td>
+
+                      <td>
+                        <button class="button button--big" type="button">
+                          <svg>
+                            <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                          </svg>
+
+                          <span> Big button 56 </span>
+                        </button>
+                      </td>
+
+                      <td>
+                        <button class="button button--middle" type="button">
+                          <svg>
+                            <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                          </svg>
+
+                          <span> Middle button 48 </span>
+                        </button>
+                      </td>
+
+                      <td>
+                        <button class="button" type="button">
+                          {{> ui/svg id="arrow-right" }}
+
+                          <span> Small button 40 </span>
+                        </button>
+                      </td>
+
+                      <td>
+                        <button class="button button--small" type="button">
+                          <svg>
+                            <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                          </svg>
+
+                          <span> Small button 32 </span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table>
+                  <caption> <h3> Стили </h3> </caption>
+
+                  <thead>
+                    <tr>
+                      <th width="200px"> Стиль </th>
+
+                      <th> Стандартная </th>
+
+                      <th> Наведение </th>
+
+                      <th> Нажата </th>
+
+                      <th> Не активна </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> Solid button </td>
+
+                      <td>
+                        <div>
+                          <button class="button" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> solid button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button class="button button-icon button-icon--prev" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button class="button button-icon button-icon--next" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> solid button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button class="button button-icon button-icon--prev hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button class="button button-icon button-icon--next hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> solid button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button-icon button-icon--circle button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> solid button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Solid button 2 </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--primary-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Solid button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--primary-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--primary-2 hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Solid button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--primary-2 button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--primary-2 pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Solid button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--primary-2 button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--primary-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Solid button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--primary-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--primary-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--primary-2 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Secondary button </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary button-icon button-icon--circle button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--secondary" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--secondary button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Secondary button 2 </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-2 hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-2 pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--secondary-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--secondary-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-2 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Secondary button 3 </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-3" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 3 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-3 hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 3 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--secondary-3 pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 3 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--secondary-3" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Secondary button 3 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--secondary-3 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-3 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--secondary-3 button-icon button-icon--circle button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Flat button </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--flat" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--flat button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--flat button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Flat button 2 </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat-2 hover" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat-2 button-icon button-icon--prev hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat-2 button-icon button-icon--next hover"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button class="button button--flat-2 pressed" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            class="button button--flat-2 button-icon button-icon--prev pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            class="button button--flat-2 button-icon button-icon--next pressed"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div>
+                          <button disabled class="button button--flat-2" type="button">
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+
+                            <span> Flat button 2 40 </span>
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            disabled
+                            class="button button--flat-2 button-icon button-icon--prev"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+
+                          <button
+                            disabled
+                            class="button button--flat-2 button-icon button-icon--next"
+                            type="button"
+                          >
+                            <svg>
+                              <use xlink:href="svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- ./ End of buttons -->
+
+              <!-- inputs -->
+              <div>
+                <h3 style="text-align: center"> Inputs </h3>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="200px"> Состояния </th>
+
+                      <th> Тип 1 </th>
+
+                      <th> Тип 2 </th>
+
+                      <th> Тип 3 </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> Стандартный </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input type="text" class="input" placeholder="На счет" />
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input type="text" class="input" placeholder="На счет" />
+
+                            <button
+                              class="button button-icon button--flat-2 input-control j_passwordToggler"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye-closed"></use>
+                              </svg>
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye"></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input
+                              data-inputmask="'mask': '+ 7(999) 999-99-99'"
+                              type="tel"
+                              class="input input--placeholder j_mask"
+                              placeholder="Телефон"
+                            />
+                            <span class="input-placeholder"> Телефон </span>
+                          </div>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <textarea
+                              rows="4"
+                              class="textarea"
+                              placeholder="Ваше сообщение"
+                            ></textarea>
+                          </div>
+
+                          <label class="input-label"> Ваше сообщение </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Неактивен </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container disabled">
+                            <input disabled type="text" class="input" placeholder="На счет" />
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container disabled">
+                            <input disabled type="text" class="input" placeholder="На счет" />
+
+                            <button
+                              disabled
+                              class="button button-icon button--flat-2 input-control j_passwordToggler"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye-closed"></use>
+                              </svg>
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye"></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container disabled">
+                            <input
+                              data-inputmask="'mask': '+ 7(999) 999-99-99'"
+                              type="tel"
+                              class="input input--placeholder j_mask"
+                              placeholder="Телефон"
+                              disabled
+                              value="908"
+                            />
+                            <span class="input-placeholder"> Телефон </span>
+                          </div>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container disabled">
+                            <textarea
+                              rows="4"
+                              disabled
+                              class="textarea"
+                              placeholder="Ваше сообщение"
+                            ></textarea>
+                          </div>
+
+                          <label class="input-label"> Ваше сообщение </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Readonly </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input readonly type="text" class="input" placeholder="На счет" />
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input readonly type="text" class="input" placeholder="На счет" />
+
+                            <button
+                              class="button button-icon button--flat-2 input-control j_passwordToggler"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye-closed"></use>
+                              </svg>
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye"></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <input
+                              data-inputmask="'mask': '+ 7(999) 999-99-99'"
+                              type="tel"
+                              class="input input--placeholder j_mask"
+                              placeholder="Телефон"
+                              readonly
+                              value="908"
+                            />
+                            <span class="input-placeholder"> Телефон </span>
+                          </div>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container">
+                            <textarea
+                              rows="4"
+                              readonly
+                              class="textarea"
+                              placeholder="Ваше сообщение"
+                            ></textarea>
+                          </div>
+
+                          <label class="input-label"> Ваше сообщение </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Невалидный </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container invalid">
+                            <input type="text" class="input" placeholder="На счет" />
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container invalid">
+                            <input type="text" class="input" placeholder="На счет" />
+
+                            <button
+                              class="button button-icon button--flat-2 input-control j_passwordToggler"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye-closed"></use>
+                              </svg>
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye"></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container invalid">
+                            <input
+                              data-inputmask="'mask': '+ 7(999) 999-99-99'"
+                              type="tel"
+                              class="input input--placeholder j_mask"
+                              placeholder="Телефон"
+                            />
+                            <span class="input-placeholder"> Телефон </span>
+                          </div>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container invalid">
+                            <textarea
+                              rows="4"
+                              class="textarea"
+                              placeholder="Ваше сообщение"
+                            ></textarea>
+                          </div>
+
+                          <label class="input-label"> Ваше сообщение </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Валидный </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container valid">
+                            <input type="text" class="input" placeholder="На счет" />
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container valid">
+                            <input type="text" class="input" placeholder="На счет" />
+
+                            <button
+                              class="button button-icon button--flat-2 input-control j_passwordToggler"
+                              type="button"
+                            >
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye-closed"></use>
+                              </svg>
+                              <svg>
+                                <use xlink:href="svg/sprite.svg#eye"></use>
+                              </svg>
+                            </button>
+                          </div>
+
+                          <label class="input-label"> На счет </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container valid">
+                            <input
+                              data-inputmask="'mask': '+ 7(999) 999-99-99'"
+                              type="tel"
+                              class="input input--placeholder j_mask"
+                              placeholder="Телефон"
+                            />
+                            <span class="input-placeholder"> Телефон </span>
+                          </div>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrapper">
+                          <div class="input-container valid">
+                            <textarea
+                              rows="4"
+                              class="textarea"
+                              placeholder="Ваше сообщение"
+                            ></textarea>
+                          </div>
+
+                          <label class="input-label"> Ваше сообщение </label>
+
+                          <p class="input-message input-message--valid"> Сообщение об успехе </p>
+                          <p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- ./ End of inputs -->
+
+              <!-- checkbox/radio/switch -->
+              <div>
+                <h3 style="text-align: center"> Checkbox / Radio / Switch </h3>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="200px"> Состояния </th>
+
+                      <th> Тип 1 </th>
+
+                      <th> Тип 2 </th>
+
+                      <th> Тип 3 </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> Стандартный </td>
+
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" />
+                          <div class="checkbox__wrap">
+                            <div class="checkbox__custom">
+                              <svg class="checkbox__icon">
+                                <use xlink:href="svg/sprite.svg#done"></use>
+                              </svg>
+                            </div>
+                            <p class="checkbox__text">
+                              Lorem
+                              <a class="checkbox__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" name="name1" />
+                          <div class="radio__wrap">
+                            <div class="radio__custom"> </div>
+                            <p class="radio__text">
+                              Lorem
+                              <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="switcher">
+                          <input class="switcher__input" type="checkbox" />
+                          <div class="switcher__wrap">
+                            <div class="switcher__custom-wrapper">
+                              <div class="switcher__custom"> </div>
+                            </div>
+
+                            <p class="switcher__text">
+                              Lorem <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Неактивен </td>
+
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" disabled />
+                          <div class="checkbox__wrap">
+                            <div class="checkbox__custom">
+                              <svg class="checkbox__icon">
+                                <use xlink:href="svg/sprite.svg#done"></use>
+                              </svg>
+                            </div>
+                            <p class="checkbox__text">
+                              Lorem
+                              <a class="checkbox__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" name="name3" disabled />
+                          <div class="radio__wrap">
+                            <div class="radio__custom"> </div>
+                            <p class="radio__text">
+                              Lorem
+                              <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="switcher">
+                          <input class="switcher__input" type="checkbox" disabled />
+                          <div class="switcher__wrap">
+                            <div class="switcher__custom-wrapper">
+                              <div class="switcher__custom"> </div>
+                            </div>
+
+                            <p class="switcher__text">
+                              Lorem <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Вкл </td>
+
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" checked />
+                          <div class="checkbox__wrap">
+                            <div class="checkbox__custom">
+                              <svg class="checkbox__icon">
+                                <use xlink:href="svg/sprite.svg#done"></use>
+                              </svg>
+                            </div>
+                            <p class="checkbox__text">
+                              Lorem
+                              <a class="checkbox__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" name="name2" checked />
+                          <div class="radio__wrap">
+                            <div class="radio__custom"> </div>
+                            <p class="radio__text">
+                              Lorem
+                              <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="switcher">
+                          <input class="switcher__input" type="checkbox" checked />
+                          <div class="switcher__wrap">
+                            <div class="switcher__custom-wrapper">
+                              <div class="switcher__custom"> </div>
+                            </div>
+
+                            <p class="switcher__text">
+                              Lorem <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Неактивен Вкл </td>
+
+                      <td>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" disabled checked />
+                          <div class="checkbox__wrap">
+                            <div class="checkbox__custom">
+                              <svg class="checkbox__icon">
+                                <use xlink:href="svg/sprite.svg#done"></use>
+                              </svg>
+                            </div>
+                            <p class="checkbox__text">
+                              Lorem
+                              <a class="checkbox__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="radio">
+                          <input class="radio__input" type="radio" name="name4" disabled checked />
+                          <div class="radio__wrap">
+                            <div class="radio__custom"> </div>
+                            <p class="radio__text">
+                              Lorem
+                              <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+
+                      <td>
+                        <label class="switcher">
+                          <input class="switcher__input" type="checkbox" disabled checked />
+                          <div class="switcher__wrap">
+                            <div class="switcher__custom-wrapper">
+                              <div class="switcher__custom"> </div>
+                            </div>
+
+                            <p class="switcher__text">
+                              Lorem <a class="radio__link" href="#">ipsum</a>
+                            </p>
+                          </div>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- ./ End of checkbox/radio/switch -->
+
+              <!-- selects -->
+              <div>
+                <h3 style="text-align: center"> Selects </h3>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="200px"> Состояния </th>
+
+                      <th> Не выбрано </th>
+
+                      <th> Выбрано </th>
+
+                      <th> Не выбрано Неактивен </th>
+
+                      <th> Выбрано Неактивен </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td> Стандартный </td>
+
+                      <td>
+                        <select
+                          id="select-1"
+                          name="select-name-1"
+                          class="select button button-select"
+                          size="1"
+                          data-select='{"placeholder": "Dropdown placeholder"}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                          <option value="mouse"> Mouse </option>
+                          <option value="crocodile"> Crocodile </option>
+                          <option value="pig"> Pig </option>
+                          <option value="bear"> Bear </option>
+                          <option value="chicken"> Chicken </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-2"
+                          name="select-name-2"
+                          class="select button button-select"
+                          size="1"
+                          data-select='{"placeholder": "Dropdown placeholder"}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                          <option value="mouse"> Mouse </option>
+                          <option value="crocodile"> Crocodile </option>
+                          <option value="pig"> Pig </option>
+                          <option value="bear"> Bear </option>
+                          <option value="chicken"> Chicken </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-3"
+                          name="select-name-3"
+                          class="select button button-select"
+                          size="1"
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder"}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                          <option value="mouse"> Mouse </option>
+                          <option value="crocodile"> Crocodile </option>
+                          <option value="pig"> Pig </option>
+                          <option value="bear"> Bear </option>
+                          <option value="chicken"> Chicken </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-4"
+                          name="select-name-4"
+                          class="select button button-select"
+                          size="1"
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder"}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                          <option value="mouse"> Mouse </option>
+                          <option value="crocodile"> Crocodile </option>
+                          <option value="pig"> Pig </option>
+                          <option value="bear"> Bear </option>
+                          <option value="chicken"> Chicken </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Множественный </td>
+
+                      <td>
+                        <select
+                          id="select-2_1"
+                          name="select-name-2_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "svgPath": "svg/sprite.svg", "startTags": -1}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-2_2"
+                          name="select-name-2_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "svgPath": "svg/sprite.svg", "startTags": -1}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-2_3"
+                          name="select-name-2_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "svgPath": "svg/sprite.svg", "startTags": -1}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-2_4"
+                          name="select-name-2_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "svgPath": "svg/sprite.svg", "startTags": -1}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> С тегами </td>
+
+                      <td>
+                        <select
+                          id="select-3_1"
+                          name="select-name-3_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-3_2"
+                          name="select-name-3_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-3_3"
+                          name="select-name-3_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-3_4"
+                          name="select-name-3_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> С поиском </td>
+
+                      <td>
+                        <select
+                          id="select-4_1"
+                          name="select-name-4_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": false}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-4_2"
+                          name="select-name-4_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": false}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-4_3"
+                          name="select-name-4_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": false}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-4_4"
+                          name="select-name-4_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": false}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> С поиском внутри </td>
+
+                      <td>
+                        <select
+                          id="select-5_1"
+                          name="select-name-5_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-5_2"
+                          name="select-name-5_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-5_3"
+                          name="select-name-5_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-5_4"
+                          name="select-name-5_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}, "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Кастомный с поиском внутри </td>
+
+                      <td>
+                        <select
+                          id="select-6_1"
+                          name="select-name-6_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}}'
+                        >
+                          <option
+                            value="parrot"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                            disabled
+                          >
+                            Parrot
+                          </option>
+                          <option
+                            value="macaw"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                          >
+                            Macaw
+                          </option>
+                          <option
+                            value="albatross"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                          >
+                            Albatross
+                          </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-6_2"
+                          name="select-name-6_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}}'
+                        >
+                          <option
+                            value="parrot"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                            disabled
+                          >
+                            Parrot
+                          </option>
+                          <option
+                            value="macaw"
+                            selected
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                          >
+                            Macaw
+                          </option>
+                          <option
+                            value="albatross"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                          >
+                            Albatross
+                          </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-6_3"
+                          name="select-name-6_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}}'
+                        >
+                          <option
+                            value="parrot"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                            disabled
+                          >
+                            Parrot
+                          </option>
+                          <option
+                            value="macaw"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                          >
+                            Macaw
+                          </option>
+                          <option
+                            value="albatross"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                          >
+                            Albatross
+                          </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-6_4"
+                          name="select-name-6_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}}'
+                        >
+                          <option
+                            value="parrot"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                            disabled
+                          >
+                            Parrot
+                          </option>
+                          <option
+                            value="macaw"
+                            selected
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                          >
+                            Macaw
+                          </option>
+                          <option
+                            value="albatross"
+                            data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                          >
+                            Albatross
+                          </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Множественный с счетчиком </td>
+
+                      <td>
+                        <select
+                          id="select-7_1"
+                          name="select-name-7_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-7_2"
+                          name="select-name-7_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw" selected> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-7_3"
+                          name="select-name-7_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-7_4"
+                          name="select-name-7_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw" selected> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> Flat </td>
+
+                      <td>
+                        <select
+                          id="select-8_1"
+                          name="select-name-8_1"
+                          class="select button button-select button--flat"
+                          size="1"
+                          multiple
+                          data-select='{"mode": "flat", "placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-8_2"
+                          name="select-name-8_2"
+                          class="select button button-select button--flat"
+                          size="1"
+                          multiple
+                          data-select='{"mode": "flat", "placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw" selected> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-8_3"
+                          name="select-name-8_3"
+                          class="select button button-select button--flat"
+                          size="1 button--flat"
+                          multiple
+                          disabled
+                          data-select='{"mode": "flat", "placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-8_4"
+                          name="select-name-8_4"
+                          class="select button button-select button--flat"
+                          size="1 button--flat"
+                          multiple
+                          disabled
+                          data-select='{"mode": "flat", "placeholder": "Dropdown placeholder", "counter": true}'
+                        >
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw" selected> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> С тегами + popper </td>
+
+                      <td>
+                        <select
+                          id="select-9_1"
+                          name="select-name-9_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}, "popper": true}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-9_2"
+                          name="select-name-9_2"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}, "popper": true}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-9_3"
+                          name="select-name-9_3"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}, "popper": true}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <select
+                          id="select-9_4"
+                          name="select-name-9_4"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          disabled
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}, "popper": true}'
+                        >
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster" selected> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> debug:true(в консоле) </td>
+
+                      <td>
+                        <select
+                          id="select-10_1"
+                          name="select-name-10_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"debug": true, "placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td> loading </td>
+
+                      <td>
+                        <select
+                          id="select-11_1"
+                          name="select-name-11_1"
+                          class="select button button-select"
+                          size="1"
+                          multiple
+                          data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true}}'
+                        >
+                          <option value="dog"> Dog </option>
+                          <option value="cat" disabled> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </select>
+
+                        <div style="display: flex; gap: 10px; margin: 5px 0 0">
+                          <button
+                            id="set-loading-11_1"
+                            class="button button--primary-2 button--small"
+                          >
+                            <span> set loading </span>
+                          </button>
+
+                          <button
+                            id="unset-loading-11_1"
+                            class="button button--primary-2 button--small"
+                          >
+                            <span> unset loading </span>
+                          </button>
+                        </div>
+
+                        <script>
+                          const $select = document.querySelector('#select-11_1');
+                          const $setBtn = document.querySelector('#set-loading-11_1');
+                          const $unsetBtn = document.querySelector('#unset-loading-11_1');
+
+                          $select.addEventListener(':init', ({ detail }) => {
+                            // console.log('detail', detail) // select
+                            // or
+                            // console.log('$select.select', $select.select) // select
+
+                            $select.select.setLoading();
+
+                            $setBtn.addEventListener(
+                              'click',
+                              $select.select.setLoading.bind($select.select, true)
+                            );
+                            $unsetBtn.addEventListener(
+                              'click',
+                              $select.select.setLoading.bind($select.select, false)
+                            );
+                          });
+                        </script>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- templates -->
+                <div style="display: none" class="select-template" id="select-item-default">
+                  <div class="select-template__img-wrapper">
+                    <img src="{0}" alt="{1}" class="select-template__img" />
+                  </div>
+
+                  <div class="select-template__wrap">
+                    <span class="select-template__title">{2}</span>
+                    <p class="select-template__text">{3}</p>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ End of selects -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {{> layouts/footer }}
+    </div>
+
+    {{> layouts/modals }}
+    {{> layouts/tooltips }}
+  </body>
+</html>

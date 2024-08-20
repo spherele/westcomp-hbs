@@ -1,0 +1,22 @@
+[data-accordion] {
+  &:not(.active) {
+    [data-accordion-content] {
+      max-height: 0;
+    }
+  }
+
+  &.active {
+    [data-accordion-button] {
+      .svg--arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+[data-accordion-content] {
+  height: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}

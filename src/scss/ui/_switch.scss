@@ -1,0 +1,178 @@
+.switcher {
+  $el: &;
+
+  --size: 20px;
+  --color: var(--base-white);
+  --color-hover: var(--base-white);
+  --color-checked: var(--base-white);
+  --color-disabled: var(--base-white);
+  --color-checked-disabled: var(--base-white);
+  --bg-color: var(--gray-500);
+  --bg-color-hover: var(--gray-400);
+  --bg-color-checked: var(--primary-2-default);
+  --bg-color-checked-hover: var(--primary-2-hover);
+  --bg-color-disabled: var(--gray-600);
+  --bg-color-checked-disabled: var(--primary-2-disabled);
+  --border-color: var(--base-white);
+  --border-color-hover: var(--base-white);
+  --border-color-disabled: var(--base-white);
+  --border-color-checked: var(--base-white);
+  --border-color-checked-hover: var(--base-white);
+  --border-color-checked-disabled: var(--base-white);
+
+  position: relative;
+  display: block;
+  margin: $checkbox-margin;
+  cursor: pointer;
+
+  &__input:checked ~ &__wrap,
+  &.checked &__wrap {
+    #{$el}__custom-wrapper {
+      background-color: var(--bg-color-checked);
+
+      &:hover {
+        background-color: var(--bg-color-checked-hover);
+      }
+
+      #{$el}__custom {
+        background-color: var(--color-checked);
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__input:disabled ~ &__wrap,
+  &.disabled &__wrap {
+    #{$el}__custom-wrapper {
+      cursor: not-allowed;
+      background-color: var(--bg-color-disabled);
+
+      &:hover {
+        background-color: var(--bg-color-disabled);
+      }
+
+      #{$el}__custom {
+        color: var(--color-disabled);
+      }
+    }
+  }
+
+  &__input:disabled:checked ~ &__wrap,
+  &.disabled.checked &__wrap {
+    #{$el}__custom-wrapper {
+      background-color: var(--bg-color-checked-disabled);
+      border-color: var(--border-color-checked-disabled);
+    }
+
+    #{$el}__custom {
+      color: var(--color-checked-disabled);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    #{$el}__wrap {
+      pointer-events: none;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    appearance: none;
+  }
+
+  &__wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color, background-color;
+
+    &:hover {
+      #{$el}__custom {
+        border-color: var(--border-color-hover);
+      }
+    }
+  }
+
+  &__custom-wrapper {
+    width: calc((var(--size) * 2) + 2px);
+    min-width: calc((var(--size) * 2) + 2px);
+    height: calc((var(--size)) + 2px);
+    min-height: calc((var(--size)) + 2px);
+    padding: 1px;
+    margin: 0 0.5em 0 0;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--bg-color-hover);
+
+      #{$el}__custom {
+        color: var(--color-hover);
+      }
+    }
+  }
+
+  &__custom {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    margin: $checkbox-custom-margin;
+    font-size: var(--size);
+    color: var(--color);
+    background-color: currentColor;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: var(--border-radius);
+    border-radius: 50%;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color, background-color, border-color, transform;
+  }
+
+  &__text {
+    display: block;
+    // padding-top: 3px;
+    margin: auto 0;
+    overflow: hidden;
+    font-family: $checkbox-font;
+    font-size: $checkbox-font-size;
+    font-weight: $checkbox-font-weight;
+    line-height: $checkbox-line-height;
+
+    b {
+      font-weight: bold;
+      color: var(--gray-8);
+    }
+  }
+
+  &__icon {
+    font-size: var(--icon-size);
+    color: currentColor;
+  }
+
+  &__svg {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,229 @@
+.nav {
+  height: 100%;
+
+  @include max-width($breakpoint-md) {
+    height: auto;
+    width: 100%;
+
+    margin-top: 26px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include max-width($breakpoint-md) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__list,
+  &__item,
+  &__link {
+    height: inherit;
+  }
+
+  &__item {
+    position: relative;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+
+    @include max-width($breakpoint-md) {
+      &:last-child {
+        .nav__link {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    // &.open {
+    //   @include max-width($breakpoint-md) {
+    //     & > .nav__link span {
+    //       &::before {
+    //         transform: rotate(0deg);
+    //       }
+    //     }
+
+    //     & > .nav__dropdown-list {
+    //       display: block;
+    //     }
+    //   }
+    // }
+
+    &:hover {
+      @include min-width($breakpoint-md + 1) {
+        border-left: 1px solid var(--blue);
+        border-right: 1px solid var(--blue);
+      }
+
+      & > .nav__dropdown-list {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--mostly-black);
+    height: 100%;
+    padding: 0 24px;
+
+    @include max-width($breakpoint-lg) {
+      font-size: 12px;
+      padding: 0 10px;
+    }
+
+    @include max-width($breakpoint-md) {
+      padding: 0;
+      width: 100%;
+      font-size: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--mostly-black);
+    }
+
+    &:hover {
+      color: var(--mostly-black);
+    }
+
+    span {
+      position: relative;
+      padding-right: 15px;
+
+      @include max-width($breakpoint-md) {
+        width: 100%;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+
+        right: 0;
+        top: 6px;
+        height: 6px;
+        width: 10px;
+
+        background-image: url(../img/svg/arrow-down-small.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include max-width($breakpoint-md) {
+          transform: rotate(-90deg);
+          height: 7px;
+          width: 11px;
+        }
+      }
+    }
+  }
+
+  &__dropdown-list {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    z-index: 2;
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    opacity: 0;
+    visibility: hidden;
+
+    @include max-width($breakpoint-md) {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+
+      display: none;
+
+      border: 0;
+    }
+
+    &.open {
+      display: block;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      @include max-width($breakpoint-md) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      &:hover {
+        background-color: var(--light-blue-2);
+
+        & > a {
+          &:before {
+            transform: rotate(-90deg) translateY(6px);
+          }
+        }
+
+        & > ul {
+          opacity: 1;
+          visibility: visible;
+
+          &.open {
+            @include max-width($breakpoint-md) {
+              display: block;
+            }
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        a {
+          border-bottom: 1px solid var(--blue);
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16px;
+        color: var(--blue);
+        white-space: nowrap;
+        padding: 12px 0;
+        min-width: 295px;
+        transition: all 0.2s linear;
+
+        &:before {
+          content: '';
+          display: block;
+
+          position: absolute;
+          right: 0;
+          top: 16px;
+
+          width: 11px;
+          height: 7px;
+
+          background-image: url(../img/svg/arrow-down-small.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          transition: all 0.2s linear;
+          transform: rotate(-90deg);
+        }
+      }
+
+      & > ul {
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        left: 100%;
+        transition: all 0.1s ease-in;
+        border: 1px solid var(--blue);
+      }
+    }
+  }
+}

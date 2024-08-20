@@ -1,0 +1,184 @@
+/* Media */
+$breakpoint-hd: 1920px;
+$breakpoint-xxl: 1600px;
+$breakpoint-xl: 1440px;
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 568px;
+$breakpoint-xxs-2: 375px;
+$breakpoint-xxs: 320px;
+
+/* Container */
+$container-max-width-native: 1640px;
+$container-max-width-special-offers: 1903px;
+$container-padding-native: 70px;
+$container-padding-mobile-native: 16px;
+$container-max-width: calc(#{$container-max-width-native} + (2 * #{$container-padding-native}));
+$container-padding: 0 $container-padding-native;
+
+/* Section */
+$section-padding: 60px 0;
+$section-padding-tablet: 40px 0;
+$section-padding-phone: 24px 0;
+
+/* Fonts */
+// paths
+$fonts-path: '../fonts/';
+$font-path-montserrat: $fonts-path + 'Montserrat/';
+$font-path-inter: $fonts-path + 'Inter/';
+
+// fonts
+$font-montserrat: 'Montserrat';
+$font-inter: 'Inter';
+$font-fallback: 'Arial';
+
+$main-font: $font-montserrat, $font-fallback;
+
+/* Global */
+$transition-duration: 0.2s;
+$transition-timing-function: ease;
+$border-radius: 40px;
+$primary-shadow: 0 0 20px rgba(var(--black-rgb), 0.25);
+$primary-shadow-2: 0 0 12px rgba(var(--black-rgb), 0.1);
+
+/* Typography */
+// h1
+$h1-font: $main-font;
+$h1-font-size: 1.875rem;
+$h1-font-size-sm: 1.875rem;
+$h1-font-weight: bold;
+$h1-line-height: 1.3;
+$h1-line-height-sm: 1.3;
+$h1-color: currentColor;
+$h1-margin: 0 0 1.75rem;
+
+// h2
+$h2-font: $main-font;
+$h2-font-size: 1.875rem;
+$h2-font-size-sm: 1.875rem;
+$h2-font-weight: bold;
+$h2-line-height: 1.3;
+$h2-line-height-sm: 1.3;
+$h2-color: currentColor;
+$h2-margin: 0 0 1.5rem;
+
+// h3
+$h3-font: $main-font;
+$h3-font-size: 1.4375rem;
+$h3-font-size-sm: 1.4375rem;
+$h3-font-weight: bold;
+$h3-line-height: 1.3;
+$h3-line-height-sm: 1.3;
+$h3-color: currentColor;
+$h3-margin: 0 0 1.25rem;
+
+// h4
+$h4-font: $main-font;
+$h4-font-size: 1.25rem;
+$h4-font-size-sm: 1.25rem;
+$h4-font-weight: bold;
+$h4-line-height: 1.3;
+$h4-line-height-sm: 1.3;
+$h4-color: currentColor;
+$h4-margin: 0 0 1rem;
+
+// h5
+$h5-font: $main-font;
+$h5-font-size: 1.125rem;
+$h5-font-size-sm: 1.125rem;
+$h5-font-weight: bold;
+$h5-line-height: 1.3;
+$h5-line-height-sm: 1.3;
+$h5-color: currentColor;
+$h5-margin: 0 0 0.75rem;
+
+// h6
+$h6-font: $main-font;
+$h6-font-size: 1rem;
+$h6-font-size-sm: 1rem;
+$h6-font-weight: bold;
+$h6-line-height: 1.3;
+$h6-line-height-sm: 1.3;
+$h6-color: currentColor;
+$h6-margin: 0 0 0.5rem;
+
+/* UI */
+// button
+$button-font-family: $main-font;
+$button-font-size: 16px;
+$button-font-weight: 500;
+$button-line-height: 24px;
+$button-text-transform: none;
+$button-border-width: 0;
+$button-border-radius: $border-radius;
+$button-padding: 15px 20px;
+$button-padding-sm: 9px 23px;
+$button-min-width: auto;
+$button-margin: 0;
+$button-box-shadow: none;
+
+$button-small-font-size: 10px;
+$button-small-font-weight: 500;
+$button-small-line-height: 16px;
+$button-small-padding: 7px 19px;
+$button-small-min-width: auto;
+
+$button-middle-font-size: 16px;
+$button-middle-font-weight: 500;
+$button-middle-line-height: 24px;
+$button-middle-padding: 11px 27px;
+$button-middle-min-width: auto;
+
+$button-big-font-size: 16px;
+$button-big-font-weight: 500;
+$button-big-line-height: 24px;
+$button-big-padding: 15px 31px;
+$button-big-min-width: auto;
+
+$button-large-font-size: 18px;
+$button-large-font-weight: 500;
+$button-large-line-height: 28px;
+$button-large-padding: 17px 39px;
+$button-large-min-width: auto;
+
+// input
+$input-font-family: $main-font;
+$input-font-size: 14px;
+$input-font-weight: normal;
+$input-line-height: 20px;
+$input-border-width: 1px;
+$input-border-radius: $border-radius;
+$input-padding: 9px 12px;
+$input-padding-sm: 9px 12px;
+$input-margin: 5px;
+$input-box-shadow: none;
+
+// textarea
+$textarea-padding: 9px 12px;
+$textarea-padding-sm: 9px 12px;
+$textarea-height: auto;
+$textarea-margin: 5px;
+
+// checkbox
+$checkbox-font: $main-font;
+$checkbox-font-size: 0.875rem;
+$checkbox-font-weight: normal;
+$checkbox-line-height: 1.4286;
+$checkbox-border-width: 1px;
+$checkbox-border-radius: 2px;
+$checkbox-size: 20px;
+$checkbox-icon-size: 16px;
+$checkbox-margin: 5px 0;
+$checkbox-custom-margin: 0 6px 0 0;
+
+// radio
+$radio-font: $main-font;
+$radio-font-size: 0.875rem;
+$radio-font-weight: normal;
+$radio-line-height: 1.4286;
+$radio-size: 20px;
+$radio-icon-size: 8px;
+$radio-border-radius: 50%;
+$radio-margin: 5px 0;
+$radio-custom-margin: 0 6px 0 0;

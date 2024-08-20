@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="profile-page">
+      <div class="container">
+        <div class="profile-page-sidebar">
+          <a class="profile-page-sidebar__item" href="">
+            <svg width="16" height="16" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.329 8.34627C11.4807 7.50628 12.2308 6.14686 12.2308 4.61538C12.2308 2.07046 10.1603 0 7.61537 0C5.07045 0 2.99999 2.07046 2.99999 4.61538C2.99999 6.14686 3.74998 7.50628 4.90177 8.34627C2.03864 9.44191 0 12.2179 0 15.4615C0 16.8613 1.13875 18 2.53846 18H12.6923C14.092 18 15.2307 16.8613 15.2307 15.4615C15.2307 12.2179 13.1921 9.44191 10.329 8.34627ZM4.38462 4.61538C4.38462 2.83395 5.83393 1.38463 7.61537 1.38463C9.39681 1.38463 10.8461 2.83395 10.8461 4.61538C10.8461 6.39682 9.39681 7.84617 7.61537 7.84617C5.83393 7.84617 4.38462 6.39682 4.38462 4.61538ZM12.6923 16.6154H2.53846C1.90223 16.6154 1.38463 16.0978 1.38463 15.4615C1.38463 12.0258 4.17969 9.23073 7.61541 9.23073C11.0511 9.23073 13.8462 12.0258 13.8462 15.4615C13.8461 16.0978 13.3285 16.6154 12.6923 16.6154Z" fill="currentColor" />
+            </svg>
+            Личные данные
+          </a>
+          <a class="profile-page-sidebar__item" href="">
+            <svg width="16" height="16" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.22309 19.002C9.09401 19.002 8.96567 18.9694 8.85002 18.904L1.09593 14.5194C0.865002 14.389 0.722866 14.1474 0.722866 13.8865V5.11727C0.722866 4.85639 0.865002 4.61486 1.09593 4.48442L8.85002 0.0997853C9.08095 -0.0306576 9.36522 -0.0306576 9.59615 0.0997853L17.3495 4.48442C17.5804 4.61486 17.7226 4.85639 17.7226 5.11727V13.8865C17.7226 14.1474 17.5804 14.389 17.3495 14.5194L9.59615 18.904C9.4805 18.9694 9.35217 19.002 9.22309 19.002ZM2.21511 13.4645L9.22309 17.4271L16.2303 13.4645V5.53929L9.22309 1.57668L2.21511 5.53929V13.4645Z" fill="currentColor" />
+              <path d="M9.22309 19.002C8.81122 19.002 8.47696 18.6746 8.47696 18.2712V9.50191C8.47696 9.09852 8.81122 8.77114 9.22309 8.77114C9.63495 8.77114 9.96921 9.09852 9.96921 9.50191V18.2712C9.96921 18.6746 9.63495 19.002 9.22309 19.002Z" fill="currentColor" />
+              <path d="M9.22234 10.2327C9.09587 10.2327 8.96754 10.2013 8.85002 10.1344L1.09593 5.74976C0.738907 5.54843 0.616916 5.10156 0.822473 4.75189C1.02878 4.40221 1.48354 4.282 1.84168 4.48442L9.59577 8.86906C9.9528 9.07075 10.0748 9.51762 9.86886 9.8673C9.73082 10.1019 9.48013 10.2327 9.22234 10.2327Z" fill="currentColor" />
+              <path d="M9.22383 10.2327C8.96605 10.2327 8.71535 10.1015 8.57694 9.8673C8.37101 9.51762 8.493 9.07075 8.85002 8.86906L16.6034 4.48442C16.96 4.282 17.4163 4.40221 17.6226 4.75189C17.8285 5.10156 17.7065 5.54843 17.3495 5.75012L9.59615 10.1348C9.47901 10.2013 9.3503 10.2327 9.22383 10.2327Z" fill="currentColor" />
+            </svg>
+            Мои заказы
+          </a>
+          <a class="profile-page-sidebar__item" href="">
+            <svg width="16" height="16" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.07242 1.96161C7.17201 1.98421 8.24307 2.48539 9.01081 3.81571C9.2961 4.30913 10.0082 4.30913 10.2946 3.81571C11.0626 2.48562 12.1336 1.98443 13.233 1.96161C14.3326 1.93765 15.4582 2.45618 16.1524 3.29056C17.4921 4.90251 17.6633 7.71949 15.7019 9.69294L9.65258 14.9051L3.60235 9.69294C1.64213 7.71972 1.81216 4.90251 3.15298 3.29056C3.84723 2.45618 4.97284 1.93765 6.07242 1.96161ZM6.10437 0.477241C4.53305 0.443692 3.00805 1.14525 2.01185 2.34206C0.169396 4.55789 0.0587074 8.24258 2.55503 10.7471C2.56826 10.7606 2.58241 10.7734 2.59679 10.7864L9.16897 16.4466C9.44718 16.6855 9.85844 16.6855 10.1364 16.4466L16.7097 10.7864C16.7241 10.7734 16.7371 10.7606 16.7504 10.7471C19.2467 8.24235 19.1346 4.55789 17.2924 2.34206C16.2976 1.14503 14.7712 0.443464 13.2008 0.477241C11.8981 0.504171 10.6417 1.2281 9.65258 2.41327C8.66368 1.2281 7.40731 0.504171 6.10437 0.477241Z" fill="currentColor" />
+            </svg>
+            Избранные товары
+          </a>
+          <a class="profile-page-sidebar__item" href="">
+            <svg width="16" height="16" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 7.5C1 7.5 4.05932 14 10.5 14C16.9407 14 20 7.5 20 7.5C20 7.5 16.9407 1 10.5 1C4.05932 1 1 7.5 1 7.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.27966 7.5C7.27966 5.70507 8.72145 4.25 10.5 4.25C12.2786 4.25 13.7203 5.70507 13.7203 7.5C13.7203 9.29493 12.2786 10.75 10.5 10.75C8.72145 10.75 7.27966 9.29493 7.27966 7.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Просмотренные товары
+          </a>
+          <a class="profile-page-sidebar__item" href="">
+            <svg width="16" height="16" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.30751 17.1562C4.30751 17.38 4.39641 17.5946 4.55464 17.7529C4.71287 17.9111 4.92749 18 5.15126 18H13.1055C13.8511 17.9992 14.566 17.7026 15.0933 17.1753C15.6205 16.648 15.9171 15.9332 15.918 15.1875V2.8125C15.9171 2.06684 15.6205 1.35195 15.0933 0.824687C14.566 0.297423 13.8511 0.00083746 13.1055 0L5.15126 0C4.92749 0 4.71287 0.0888948 4.55464 0.247129C4.39641 0.405362 4.30751 0.619974 4.30751 0.84375C4.30751 1.06753 4.39641 1.28214 4.55464 1.44037C4.71287 1.59861 4.92749 1.6875 5.15126 1.6875H13.1055C13.4037 1.68783 13.6897 1.80646 13.9006 2.01736C14.1115 2.22827 14.2301 2.51423 14.2305 2.8125V15.1875C14.2302 15.4858 14.1115 15.7717 13.9006 15.9826C13.6897 16.1936 13.4037 16.3122 13.1055 16.3125H5.15126C4.92749 16.3125 4.71287 16.4014 4.55464 16.5596C4.39641 16.7179 4.30751 16.9325 4.30751 17.1562ZM0.491196 8.4034L4.5008 4.39376C4.57883 4.31397 4.67191 4.25046 4.77465 4.2069C4.87739 4.16333 4.98776 4.14058 5.09935 4.13996C5.21095 4.13935 5.32156 4.16087 5.42478 4.2033C5.528 4.24572 5.62178 4.3082 5.70068 4.38711C5.77959 4.46603 5.84206 4.55982 5.88447 4.66304C5.92688 4.76626 5.94839 4.87688 5.94776 4.98847C5.94713 5.10007 5.92437 5.21043 5.88079 5.31317C5.83722 5.4159 5.77369 5.50898 5.6939 5.587L3.12479 8.15625H9.76707C9.99084 8.15625 10.2055 8.24514 10.3637 8.40338C10.5219 8.56161 10.6108 8.77622 10.6108 9C10.6108 9.22378 10.5219 9.43839 10.3637 9.59662C10.2055 9.75486 9.99084 9.84375 9.76707 9.84375H3.12482L5.69404 12.413C5.77274 12.4912 5.83522 12.5843 5.87791 12.6867C5.92059 12.7892 5.94264 12.8991 5.94279 13.0101C5.94294 13.1211 5.92119 13.231 5.87879 13.3336C5.83638 13.4361 5.77415 13.5293 5.69566 13.6078C5.61718 13.6863 5.52398 13.7485 5.4214 13.791C5.31883 13.8334 5.20889 13.8551 5.09789 13.855C4.9869 13.8548 4.87702 13.8328 4.77456 13.7901C4.6721 13.7474 4.57907 13.6849 4.5008 13.6062L0.491196 9.59664C0.332963 9.4384 0.244068 9.22379 0.244068 9.00002C0.244068 8.77624 0.332963 8.56163 0.491196 8.4034Z" fill="currentColor" />
+            </svg>
+            Выйти
+          </a>
+        </div>
+        <div class="profile-page__content">
+          <div class="profile-page__breadcrumbs breadcrumbs">
+            <a class="breadcrumbs__item" href="/">Главная</a>
+            <div class="breadcrumbs__separator">/</div>
+            <span class="breadcrumbs__item breadcrumbs__item_active">Личный кабинет</span>
+            <div class="breadcrumbs__separator">/</div>
+            <span class="breadcrumbs__item">Личные данные</span>
+          </div>
+          <div class="profile-page__title">Личные данные</div>
+          <div class="profile-page__section">
+            <form class="personal-data" method="post" style="display: none;">
+              <label class="personal-data-input">
+                <div class="personal-data-input__title">Фамилия</div>
+                <input class="personal-data-input__control" type="text" name="userLastName" placeholder="Иванов">
+              </label>
+              <label class="personal-data-input">
+                <div class="personal-data-input__title">Имя</div>
+                <input class="personal-data-input__control" type="text" name="username" placeholder="Иван">
+              </label>
+              <label class="personal-data-input">
+                <div class="personal-data-input__title">Отчество</div>
+                <input class="personal-data-input__control" type="text" name="userSecondName" placeholder="Иванович">
+              </label>
+              <label class="personal-data-input">
+                <div class="personal-data-input__title">Телефон</div>
+                <input class="personal-data-input__control" type="tel" name="phoneNumber" placeholder="+7-333-333-33-33">
+              </label>
+              <label class="personal-data-input">
+                <div class="personal-data-input__title">E-Mail</div>
+                <input class="personal-data-input__control" type="email" name="email" placeholder="example@email.com">
+              </label>
+              <div class="personal-data-footer">
+                <button class="personal-data-footer__item" type="submit">Применить изменения</button>
+                <a class="personal-data-footer__item" href="?pass_change">Изменить пароль</a>
+              </div>
+            </form>
+            <div class="table-orders-wrapper" style="display: none;">
+              <table class="table-orders">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>Название товара</th>
+                    <th>Дата заказа</th>
+                    <th>Способ доставки</th>
+                    <th>Статус</th>
+                    <th>Стоимость</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>26716355</td>
+                    <td>Dell Poweredge R730XD</td>
+                    <td>17.02.2024</td>
+                    <td>Самовывоз</td>
+                    <td>
+                      <div class="table-orders__tag table-orders__tag_blue">В пути</div>
+                    </td>
+                    <td>30 765 ₽</td>
+                    <td>
+                      <button class="table-orders__button" type="button">Повторить</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>26716355</td>
+                    <td>Dell Poweredge R730XD</td>
+                    <td>17.02.2024</td>
+                    <td>Самовывоз</td>
+                    <td>
+                      <div class="table-orders__tag table-orders__tag_red">Не оплачен</div>
+                    </td>
+                    <td>30 765 ₽</td>
+                    <td>
+                      <button class="table-orders__button" type="button">Повторить</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>26716355</td>
+                    <td>Dell Poweredge R730XD</td>
+                    <td>17.02.2024</td>
+                    <td>Самовывоз</td>
+                    <td>
+                      <div class="table-orders__tag table-orders__tag_green">Получен</div>
+                    </td>
+                    <td>30 765 ₽</td>
+                    <td>
+                      <button class="table-orders__button" type="button">Повторить</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>26716355</td>
+                    <td>Dell Poweredge R730XD</td>
+                    <td>17.02.2024</td>
+                    <td>Самовывоз</td>
+                    <td>
+                      <div class="table-orders__tag table-orders__tag_gray">Отменен</div>
+                    </td>
+                    <td>30 765 ₽</td>
+                    <td>
+                      <button class="table-orders__button" type="button">Повторить</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="products-list" style="display: none;">
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar="">
+                    <a href="#" class="card-product__action" data-card-action-btn="">
+                      <svg class="svg ">
+                        <use xlink:href="svg/sprite.svg#graph"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn="">
+                      <svg class="svg ">
+                        <use xlink:href="svg/sprite.svg#favorite-2"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="/upload/iblock/584/d0riosqop2cimr06yq3htvl1mtnarpfl.jpeg" alt="">
+                    </div>
+                    <div class="card-product__info">
+                      <a href="/catalog/element/cisco_wic_1t_1_port_serial_wan_interface_card_800_01514_01/" class="card-product__name" title=" Cisco WIC-1T 1-Port Serial WAN Interface Card (800-01514-01)"> Cisco WIC-1T 1-Port Serial WAN Interface Card (800-01514-01)</a>
+                      <div class="card-product__descr">
+                        Модуль Cisco WIC-1T 1-Port Serial WAN Interface Card; 1 x WAN, кабельный модем, выделенная линия, для маршрутизаторов 1600 / 1720 / 2600, / 3600 серий (800-01514-01) </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__price">300 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a class="card-product__button card-product__button--plus-decor add-basket-button" data-option="241">
+                        <span>
+                          <svg class="svg cart">
+                            <use xlink:href="/local/templates/westcomp/svg/sprite.svg#cart"></use>
+                          </svg>
+                          <svg class="svg plus">
+                            <use xlink:href="/local/templates/westcomp/svg/sprite.svg#plus"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a class="card-product__button card-product__button--plus-decor delete-viewed-button" data-option="241">
+                        <span>
+                          <svg fill="#0f6da1" width="80px" height="80px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 44.5235 48.6602 L 46.1407 14.3945 L 48.4844 14.3945 C 49.4454 14.3945 50.2187 13.5976 50.2187 12.6367 C 50.2187 11.6758 49.4454 10.8555 48.4844 10.8555 L 38.2422 10.8555 L 38.2422 7.3398 C 38.2422 3.9883 35.9688 1.8086 32.3595 1.8086 L 23.5938 1.8086 C 19.9844 1.8086 17.7344 3.9883 17.7344 7.3398 L 17.7344 10.8555 L 7.5391 10.8555 C 6.6016 10.8555 5.7813 11.6758 5.7813 12.6367 C 5.7813 13.5976 6.6016 14.3945 7.5391 14.3945 L 9.8829 14.3945 L 11.5000 48.6836 C 11.6641 52.0586 13.8907 54.1914 17.2657 54.1914 L 38.7579 54.1914 C 42.1095 54.1914 44.3595 52.0351 44.5235 48.6602 Z M 21.4844 7.5742 C 21.4844 6.2383 22.4688 5.3008 23.8751 5.3008 L 32.1016 5.3008 C 33.5313 5.3008 34.5157 6.2383 34.5157 7.5742 L 34.5157 10.8555 L 21.4844 10.8555 Z M 17.6173 50.6758 C 16.2579 50.6758 15.2500 49.6445 15.1797 48.2852 L 13.5391 14.3945 L 42.3907 14.3945 L 40.8438 48.2852 C 40.7735 49.6680 39.7891 50.6758 38.4063 50.6758 Z M 34.9610 46.5508 C 35.7344 46.5508 36.3204 45.9180 36.3438 45.0273 L 37.0469 20.2773 C 37.0704 19.3867 36.4610 18.7305 35.6641 18.7305 C 34.9376 18.7305 34.3282 19.4102 34.3048 20.2539 L 33.6016 45.0273 C 33.5782 45.8711 34.1641 46.5508 34.9610 46.5508 Z M 21.0626 46.5508 C 21.8595 46.5508 22.4454 45.8711 22.4219 45.0273 L 21.7188 20.2539 C 21.6954 19.4102 21.0626 18.7305 20.3360 18.7305 C 19.5391 18.7305 18.9532 19.3867 18.9766 20.2773 L 19.7032 45.0273 C 19.7266 45.9180 20.2891 46.5508 21.0626 46.5508 Z M 29.4298 45.0273 L 29.4298 20.2539 C 29.4298 19.4102 28.7969 18.7305 28.0235 18.7305 C 27.2500 18.7305 26.5938 19.4102 26.5938 20.2539 L 26.5938 45.0273 C 26.5938 45.8711 27.2500 46.5508 28.0235 46.5508 C 28.7735 46.5508 29.4298 45.8711 29.4298 45.0273 Z"></path>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar="">
+                    <a href="#" class="card-product__action" data-card-action-btn="">
+                      <svg class="svg ">
+                        <use xlink:href="svg/sprite.svg#graph"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn="">
+                      <svg class="svg ">
+                        <use xlink:href="svg/sprite.svg#favorite-2"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="/upload/iblock/584/d0riosqop2cimr06yq3htvl1mtnarpfl.jpeg" alt="">
+                    </div>
+                    <div class="card-product__info">
+                      <a href="/catalog/element/cisco_wic_1t_1_port_serial_wan_interface_card_800_01514_01/" class="card-product__name" title=" Cisco WIC-1T 1-Port Serial WAN Interface Card (800-01514-01)"> Cisco WIC-1T 1-Port Serial WAN Interface Card (800-01514-01)</a>
+                      <div class="card-product__descr">
+                        Модуль Cisco WIC-1T 1-Port Serial WAN Interface Card; 1 x WAN, кабельный модем, выделенная линия, для маршрутизаторов 1600 / 1720 / 2600, / 3600 серий (800-01514-01) </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__price">300 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a class="card-product__button card-product__button--plus-decor add-basket-button" data-option="241">
+                        <span>
+                          <svg class="svg cart">
+                            <use xlink:href="/local/templates/westcomp/svg/sprite.svg#cart"></use>
+                          </svg>
+                          <svg class="svg plus">
+                            <use xlink:href="/local/templates/westcomp/svg/sprite.svg#plus"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a class="card-product__button card-product__button--plus-decor delete-viewed-button" data-option="241">
+                        <span>
+                          <svg fill="#0f6da1" width="80px" height="80px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 44.5235 48.6602 L 46.1407 14.3945 L 48.4844 14.3945 C 49.4454 14.3945 50.2187 13.5976 50.2187 12.6367 C 50.2187 11.6758 49.4454 10.8555 48.4844 10.8555 L 38.2422 10.8555 L 38.2422 7.3398 C 38.2422 3.9883 35.9688 1.8086 32.3595 1.8086 L 23.5938 1.8086 C 19.9844 1.8086 17.7344 3.9883 17.7344 7.3398 L 17.7344 10.8555 L 7.5391 10.8555 C 6.6016 10.8555 5.7813 11.6758 5.7813 12.6367 C 5.7813 13.5976 6.6016 14.3945 7.5391 14.3945 L 9.8829 14.3945 L 11.5000 48.6836 C 11.6641 52.0586 13.8907 54.1914 17.2657 54.1914 L 38.7579 54.1914 C 42.1095 54.1914 44.3595 52.0351 44.5235 48.6602 Z M 21.4844 7.5742 C 21.4844 6.2383 22.4688 5.3008 23.8751 5.3008 L 32.1016 5.3008 C 33.5313 5.3008 34.5157 6.2383 34.5157 7.5742 L 34.5157 10.8555 L 21.4844 10.8555 Z M 17.6173 50.6758 C 16.2579 50.6758 15.2500 49.6445 15.1797 48.2852 L 13.5391 14.3945 L 42.3907 14.3945 L 40.8438 48.2852 C 40.7735 49.6680 39.7891 50.6758 38.4063 50.6758 Z M 34.9610 46.5508 C 35.7344 46.5508 36.3204 45.9180 36.3438 45.0273 L 37.0469 20.2773 C 37.0704 19.3867 36.4610 18.7305 35.6641 18.7305 C 34.9376 18.7305 34.3282 19.4102 34.3048 20.2539 L 33.6016 45.0273 C 33.5782 45.8711 34.1641 46.5508 34.9610 46.5508 Z M 21.0626 46.5508 C 21.8595 46.5508 22.4454 45.8711 22.4219 45.0273 L 21.7188 20.2539 C 21.6954 19.4102 21.0626 18.7305 20.3360 18.7305 C 19.5391 18.7305 18.9532 19.3867 18.9766 20.2773 L 19.7032 45.0273 C 19.7266 45.9180 20.2891 46.5508 21.0626 46.5508 Z M 29.4298 45.0273 L 29.4298 20.2539 C 29.4298 19.4102 28.7969 18.7305 28.0235 18.7305 C 27.2500 18.7305 26.5938 19.4102 26.5938 20.2539 L 26.5938 45.0273 C 26.5938 45.8711 27.2500 46.5508 28.0235 46.5508 C 28.7735 46.5508 29.4298 45.8711 29.4298 45.0273 Z"></path>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

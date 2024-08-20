@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="cart-page">
+      <div class="container">
+        <div class="cart-page__breadcrumbs breadcrumbs">
+          <a class="breadcrumbs__item" href="/">Главная</a>
+          <div class="breadcrumbs__separator">/</div>
+          <span class="breadcrumbs__item breadcrumbs__item_active">Корзина</span>
+        </div>
+        <div class="cart-page__title">Корзина</div>
+        <div class="cart-page__content">
+          <div class="products">
+            <div class="products-item" data-price="69900">
+              <img class="products-item__image" src="../img/product-1.png" alt="">
+              <a class="products-item__wrapper" href="#">
+                <div class="products-item__name">Dell Poweredge R730XD</div>
+                <div class="products-item__description">12GB SAS Drive Enclosure with 40 SFF (2.5in)</div>
+                <div class="products-item__description">2U Rackmount / 2 x PSU (Hot Plug) / 3072GB DDR4 /24SFF (Hot Swap) / Intel Xeon E5-2600v4</div>
+              </a>
+              <div class="products-item-amount">
+                <button class="products-item-amount__button products-item-amount__button_minus" type="button">
+                  <svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="2" width="2" height="18" rx="1" transform="rotate(-90 0 2)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+                <input class="products-item-amount__input" type="number" value="1" min="1" max="999">
+                <button class="products-item-amount__button products-item-amount__button_plus" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" width="2" height="18" rx="1" fill="#0F6DA1" />
+                    <rect y="10" width="2" height="18" rx="1" transform="rotate(-90 0 10)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+              </div>
+              <div class="products-item-price">
+                <div class="products-item-price__warranty">
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.3 8.45451L7.2184 10.3729L10.6542 6.9371M7.97712 0.900024L1.25 3.69305V7.08836C1.25 11.4824 3.90889 15.4395 7.97712 17.1C12.0453 15.4395 14.7042 11.4824 14.7042 7.08836V3.69305L7.97712 0.900024Z" stroke="#2FAE96" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  3 года
+                </div>
+                <div class="products-item-price__value">69 900 ₽</div>
+                <div class="products-item-price__tax">в том числе НДС 20%</div>
+              </div>
+              <button class="products-item__remove-button" type="button">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.0902 4.90884C12.8733 4.90884 12.6652 4.99504 12.5117 5.14847C12.3583 5.3019 12.2721 5.51 12.2721 5.72698V14.8828C12.2486 15.2965 12.0626 15.6842 11.7546 15.9614C11.4466 16.2386 11.0415 16.3829 10.6276 16.3628H4.09888C3.68498 16.3829 3.27991 16.2386 2.9719 15.9614C2.66389 15.6842 2.47789 15.2965 2.45442 14.8828V5.72698C2.45442 5.51 2.36822 5.3019 2.21479 5.14847C2.06136 4.99504 1.85327 4.90884 1.63628 4.90884C1.4193 4.90884 1.2112 4.99504 1.05777 5.14847C0.904337 5.3019 0.81814 5.51 0.81814 5.72698V14.8828C0.841493 15.7306 1.19987 16.5345 1.81478 17.1186C2.4297 17.7027 3.25102 18.0193 4.09888 17.9991H10.6276C11.4755 18.0193 12.2968 17.7027 12.9117 17.1186C13.5267 16.5345 13.885 15.7306 13.9084 14.8828V5.72698C13.9084 5.51 13.8222 5.3019 13.6688 5.14847C13.5153 4.99504 13.3072 4.90884 13.0902 4.90884Z" fill="#0F6DA1" />
+                  <path d="M13.9084 2.45442H10.6358V0.81814C10.6358 0.601156 10.5496 0.393059 10.3962 0.239628C10.2428 0.0861966 10.0347 0 9.81768 0H4.90884C4.69186 0 4.48376 0.0861966 4.33033 0.239628C4.1769 0.393059 4.0907 0.601156 4.0907 0.81814V2.45442H0.81814C0.601156 2.45442 0.393059 2.54062 0.239628 2.69405C0.0861966 2.84748 0 3.05558 0 3.27256C0 3.48955 0.0861966 3.69764 0.239628 3.85107C0.393059 4.0045 0.601156 4.0907 0.81814 4.0907H13.9084C14.1254 4.0907 14.3335 4.0045 14.4869 3.85107C14.6403 3.69764 14.7265 3.48955 14.7265 3.27256C14.7265 3.05558 14.6403 2.84748 14.4869 2.69405C14.3335 2.54062 14.1254 2.45442 13.9084 2.45442ZM5.72698 2.45442V1.63628H8.99954V2.45442H5.72698Z" fill="#0F6DA1" />
+                  <path d="M6.54512 13.0902V7.36326C6.54512 7.14628 6.45893 6.93818 6.30549 6.78475C6.15206 6.63132 5.94397 6.54512 5.72698 6.54512C5.51 6.54512 5.3019 6.63132 5.14847 6.78475C4.99504 6.93818 4.90884 7.14628 4.90884 7.36326V13.0902C4.90884 13.3072 4.99504 13.5153 5.14847 13.6688C5.3019 13.8222 5.51 13.9084 5.72698 13.9084C5.94397 13.9084 6.15206 13.8222 6.30549 13.6688C6.45893 13.5153 6.54512 13.3072 6.54512 13.0902Z" fill="#0F6DA1" />
+                  <path d="M9.81768 13.0902V7.36326C9.81768 7.14628 9.73149 6.93818 9.57806 6.78475C9.42463 6.63132 9.21653 6.54512 8.99954 6.54512C8.78256 6.54512 8.57446 6.63132 8.42103 6.78475C8.2676 6.93818 8.1814 7.14628 8.1814 7.36326V13.0902C8.1814 13.3072 8.2676 13.5153 8.42103 13.6688C8.57446 13.8222 8.78256 13.9084 8.99954 13.9084C9.21653 13.9084 9.42463 13.8222 9.57806 13.6688C9.73149 13.5153 9.81768 13.3072 9.81768 13.0902Z" fill="#0F6DA1" />
+                </svg>
+              </button>
+            </div>
+            <div class="products-item" data-price="69900">
+              <img class="products-item__image" src="../img/product-1.png" alt="">
+              <a class="products-item__wrapper" href="#">
+                <div class="products-item__name">Dell Poweredge R730XD</div>
+                <div class="products-item__description">12GB SAS Drive Enclosure with 40 SFF (2.5in)</div>
+                <div class="products-item__description">2U Rackmount / 2 x PSU (Hot Plug) / 3072GB DDR4 /24SFF (Hot Swap) / Intel Xeon E5-2600v4</div>
+              </a>
+              <div class="products-item-amount">
+                <button class="products-item-amount__button products-item-amount__button_minus" type="button">
+                  <svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="2" width="2" height="18" rx="1" transform="rotate(-90 0 2)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+                <input class="products-item-amount__input" type="number" value="1" min="1" max="999">
+                <button class="products-item-amount__button products-item-amount__button_plus" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" width="2" height="18" rx="1" fill="#0F6DA1" />
+                    <rect y="10" width="2" height="18" rx="1" transform="rotate(-90 0 10)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+              </div>
+              <div class="products-item-price">
+                <div class="products-item-price__warranty">
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.3 8.45451L7.2184 10.3729L10.6542 6.9371M7.97712 0.900024L1.25 3.69305V7.08836C1.25 11.4824 3.90889 15.4395 7.97712 17.1C12.0453 15.4395 14.7042 11.4824 14.7042 7.08836V3.69305L7.97712 0.900024Z" stroke="#2FAE96" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  3 года
+                </div>
+                <div class="products-item-price__value">69 900 ₽</div>
+                <div class="products-item-price__tax">в том числе НДС 20%</div>
+              </div>
+              <button class="products-item__remove-button" type="button">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.0902 4.90884C12.8733 4.90884 12.6652 4.99504 12.5117 5.14847C12.3583 5.3019 12.2721 5.51 12.2721 5.72698V14.8828C12.2486 15.2965 12.0626 15.6842 11.7546 15.9614C11.4466 16.2386 11.0415 16.3829 10.6276 16.3628H4.09888C3.68498 16.3829 3.27991 16.2386 2.9719 15.9614C2.66389 15.6842 2.47789 15.2965 2.45442 14.8828V5.72698C2.45442 5.51 2.36822 5.3019 2.21479 5.14847C2.06136 4.99504 1.85327 4.90884 1.63628 4.90884C1.4193 4.90884 1.2112 4.99504 1.05777 5.14847C0.904337 5.3019 0.81814 5.51 0.81814 5.72698V14.8828C0.841493 15.7306 1.19987 16.5345 1.81478 17.1186C2.4297 17.7027 3.25102 18.0193 4.09888 17.9991H10.6276C11.4755 18.0193 12.2968 17.7027 12.9117 17.1186C13.5267 16.5345 13.885 15.7306 13.9084 14.8828V5.72698C13.9084 5.51 13.8222 5.3019 13.6688 5.14847C13.5153 4.99504 13.3072 4.90884 13.0902 4.90884Z" fill="#0F6DA1" />
+                  <path d="M13.9084 2.45442H10.6358V0.81814C10.6358 0.601156 10.5496 0.393059 10.3962 0.239628C10.2428 0.0861966 10.0347 0 9.81768 0H4.90884C4.69186 0 4.48376 0.0861966 4.33033 0.239628C4.1769 0.393059 4.0907 0.601156 4.0907 0.81814V2.45442H0.81814C0.601156 2.45442 0.393059 2.54062 0.239628 2.69405C0.0861966 2.84748 0 3.05558 0 3.27256C0 3.48955 0.0861966 3.69764 0.239628 3.85107C0.393059 4.0045 0.601156 4.0907 0.81814 4.0907H13.9084C14.1254 4.0907 14.3335 4.0045 14.4869 3.85107C14.6403 3.69764 14.7265 3.48955 14.7265 3.27256C14.7265 3.05558 14.6403 2.84748 14.4869 2.69405C14.3335 2.54062 14.1254 2.45442 13.9084 2.45442ZM5.72698 2.45442V1.63628H8.99954V2.45442H5.72698Z" fill="#0F6DA1" />
+                  <path d="M6.54512 13.0902V7.36326C6.54512 7.14628 6.45893 6.93818 6.30549 6.78475C6.15206 6.63132 5.94397 6.54512 5.72698 6.54512C5.51 6.54512 5.3019 6.63132 5.14847 6.78475C4.99504 6.93818 4.90884 7.14628 4.90884 7.36326V13.0902C4.90884 13.3072 4.99504 13.5153 5.14847 13.6688C5.3019 13.8222 5.51 13.9084 5.72698 13.9084C5.94397 13.9084 6.15206 13.8222 6.30549 13.6688C6.45893 13.5153 6.54512 13.3072 6.54512 13.0902Z" fill="#0F6DA1" />
+                  <path d="M9.81768 13.0902V7.36326C9.81768 7.14628 9.73149 6.93818 9.57806 6.78475C9.42463 6.63132 9.21653 6.54512 8.99954 6.54512C8.78256 6.54512 8.57446 6.63132 8.42103 6.78475C8.2676 6.93818 8.1814 7.14628 8.1814 7.36326V13.0902C8.1814 13.3072 8.2676 13.5153 8.42103 13.6688C8.57446 13.8222 8.78256 13.9084 8.99954 13.9084C9.21653 13.9084 9.42463 13.8222 9.57806 13.6688C9.73149 13.5153 9.81768 13.3072 9.81768 13.0902Z" fill="#0F6DA1" />
+                </svg>
+              </button>
+            </div>
+            <div class="products-item" data-price="69900">
+              <img class="products-item__image" src="../img/product-1.png" alt="">
+              <a class="products-item__wrapper" href="#">
+                <div class="products-item__name">Dell Poweredge R730XD</div>
+                <div class="products-item__description">12GB SAS Drive Enclosure with 40 SFF (2.5in)</div>
+                <div class="products-item__description">2U Rackmount / 2 x PSU (Hot Plug) / 3072GB DDR4 /24SFF (Hot Swap) / Intel Xeon E5-2600v4</div>
+              </a>
+              <div class="products-item-amount">
+                <button class="products-item-amount__button products-item-amount__button_minus" type="button">
+                  <svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="2" width="2" height="18" rx="1" transform="rotate(-90 0 2)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+                <input class="products-item-amount__input" type="number" value="1" min="1" max="999">
+                <button class="products-item-amount__button products-item-amount__button_plus" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" width="2" height="18" rx="1" fill="#0F6DA1" />
+                    <rect y="10" width="2" height="18" rx="1" transform="rotate(-90 0 10)" fill="#0F6DA1" />
+                  </svg>
+                </button>
+              </div>
+              <div class="products-item-price">
+                <div class="products-item-price__warranty">
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.3 8.45451L7.2184 10.3729L10.6542 6.9371M7.97712 0.900024L1.25 3.69305V7.08836C1.25 11.4824 3.90889 15.4395 7.97712 17.1C12.0453 15.4395 14.7042 11.4824 14.7042 7.08836V3.69305L7.97712 0.900024Z" stroke="#2FAE96" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  3 года
+                </div>
+                <div class="products-item-price__value">69 900 ₽</div>
+                <div class="products-item-price__tax">в том числе НДС 20%</div>
+              </div>
+              <button class="products-item__remove-button" type="button">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.0902 4.90884C12.8733 4.90884 12.6652 4.99504 12.5117 5.14847C12.3583 5.3019 12.2721 5.51 12.2721 5.72698V14.8828C12.2486 15.2965 12.0626 15.6842 11.7546 15.9614C11.4466 16.2386 11.0415 16.3829 10.6276 16.3628H4.09888C3.68498 16.3829 3.27991 16.2386 2.9719 15.9614C2.66389 15.6842 2.47789 15.2965 2.45442 14.8828V5.72698C2.45442 5.51 2.36822 5.3019 2.21479 5.14847C2.06136 4.99504 1.85327 4.90884 1.63628 4.90884C1.4193 4.90884 1.2112 4.99504 1.05777 5.14847C0.904337 5.3019 0.81814 5.51 0.81814 5.72698V14.8828C0.841493 15.7306 1.19987 16.5345 1.81478 17.1186C2.4297 17.7027 3.25102 18.0193 4.09888 17.9991H10.6276C11.4755 18.0193 12.2968 17.7027 12.9117 17.1186C13.5267 16.5345 13.885 15.7306 13.9084 14.8828V5.72698C13.9084 5.51 13.8222 5.3019 13.6688 5.14847C13.5153 4.99504 13.3072 4.90884 13.0902 4.90884Z" fill="#0F6DA1" />
+                  <path d="M13.9084 2.45442H10.6358V0.81814C10.6358 0.601156 10.5496 0.393059 10.3962 0.239628C10.2428 0.0861966 10.0347 0 9.81768 0H4.90884C4.69186 0 4.48376 0.0861966 4.33033 0.239628C4.1769 0.393059 4.0907 0.601156 4.0907 0.81814V2.45442H0.81814C0.601156 2.45442 0.393059 2.54062 0.239628 2.69405C0.0861966 2.84748 0 3.05558 0 3.27256C0 3.48955 0.0861966 3.69764 0.239628 3.85107C0.393059 4.0045 0.601156 4.0907 0.81814 4.0907H13.9084C14.1254 4.0907 14.3335 4.0045 14.4869 3.85107C14.6403 3.69764 14.7265 3.48955 14.7265 3.27256C14.7265 3.05558 14.6403 2.84748 14.4869 2.69405C14.3335 2.54062 14.1254 2.45442 13.9084 2.45442ZM5.72698 2.45442V1.63628H8.99954V2.45442H5.72698Z" fill="#0F6DA1" />
+                  <path d="M6.54512 13.0902V7.36326C6.54512 7.14628 6.45893 6.93818 6.30549 6.78475C6.15206 6.63132 5.94397 6.54512 5.72698 6.54512C5.51 6.54512 5.3019 6.63132 5.14847 6.78475C4.99504 6.93818 4.90884 7.14628 4.90884 7.36326V13.0902C4.90884 13.3072 4.99504 13.5153 5.14847 13.6688C5.3019 13.8222 5.51 13.9084 5.72698 13.9084C5.94397 13.9084 6.15206 13.8222 6.30549 13.6688C6.45893 13.5153 6.54512 13.3072 6.54512 13.0902Z" fill="#0F6DA1" />
+                  <path d="M9.81768 13.0902V7.36326C9.81768 7.14628 9.73149 6.93818 9.57806 6.78475C9.42463 6.63132 9.21653 6.54512 8.99954 6.54512C8.78256 6.54512 8.57446 6.63132 8.42103 6.78475C8.2676 6.93818 8.1814 7.14628 8.1814 7.36326V13.0902C8.1814 13.3072 8.2676 13.5153 8.42103 13.6688C8.57446 13.8222 8.78256 13.9084 8.99954 13.9084C9.21653 13.9084 9.42463 13.8222 9.57806 13.6688C9.73149 13.5153 9.81768 13.3072 9.81768 13.0902Z" fill="#0F6DA1" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar-result" data-discount="53000">
+              <div class="sidebar-result-price">
+                <div class="sidebar-result-price__text">Итого:</div>
+                <div class="sidebar-result-price__wrapper">
+                  <div class="sidebar-result-price__value">313 425 ₽</div>
+                  <div class="sidebar-result-price__tax">в том числе НДС 20%</div>
+                </div>
+              </div>
+              <div class="sidebar-result-items">
+                <div class="sidebar-result-items-item sidebar-result-items-item_summary">
+                  <div class="sidebar-result-items-item__name">Товары — 3 шт.</div>
+                  <div class="sidebar-result-items-item__price">370 000 ₽</div>
+                </div>
+                <div class="sidebar-result-items-item sidebar-result-items-item_discount">
+                  <div class="sidebar-result-items-item__name">Скидка</div>
+                  <div class="sidebar-result-items-item__price">- 53 000 ₽</div>
+                </div>
+              </div>
+              <div class="sidebar-result__button">
+                <button class="button" type="button">Оформить заказ</button>
+              </div>
+            </div>
+            <div class="sidebar-contacts">
+              <a class="sidebar-contacts-item" href="#">
+                <div class="sidebar-contacts-item__icon">
+                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.0078 0.984375H2.00781C1.45553 0.984375 1.00781 1.43209 1.00781 1.98437V11.9844C1.00781 12.5367 1.45553 12.9844 2.00781 12.9844H16.0078C16.5601 12.9844 17.0078 12.5367 17.0078 11.9844V1.98438C17.0078 1.43209 16.5601 0.984375 16.0078 0.984375Z" stroke="white" stroke-width="1.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.60129 0.984375C2.68639 0.984375 2.25187 2.11129 2.92994 2.72551L8.32912 7.6163C8.72941 7.97892 9.28618 7.97892 9.68647 7.6163L15.0857 2.72552C15.7637 2.11129 15.3292 0.984375 14.4143 0.984375H3.60129Z" stroke="white" stroke-width="1.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="sidebar-contacts-item__text">Связаться с менеджером по почте</div>
+              </a>
+              <a class="sidebar-contacts-item" href="#">
+                <div class="sidebar-contacts-item__icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.73332 1C3.7433 1 2.79363 1.39334 2.09339 2.09345C1.39339 2.7936 1 3.74319 1 4.73332C1 10.4035 5.59644 15 11.2667 15C12.2567 15 13.2064 14.6067 13.9066 13.9065C14.6066 13.2064 15 12.2568 15 11.2667L10.3333 9.4L9.4 11.7333H9.39951C6.56477 11.7333 4.26668 9.43529 4.26668 6.60046V6.6L6.6 5.66668L4.73332 1Z" stroke="white" stroke-width="1.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="sidebar-contacts-item__text">Заказать обратный звонок</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

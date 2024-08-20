@@ -1,0 +1,22 @@
+.test2 {
+  &_container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+
+  &_section {
+    h1 {
+      font-size: 24px;
+      color: #2b634f;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}

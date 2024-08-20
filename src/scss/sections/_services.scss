@@ -1,0 +1,53 @@
+.services {
+  &-carousel {
+    overflow-x: hidden;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+
+      @include max-width(414px) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &__slide {
+      flex-shrink: 0;
+
+      .card-service {
+        height: auto;
+        aspect-ratio: 1;
+      }
+    }
+  }
+
+  &__button {
+    @media (min-width: 1025px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    svg {
+      fill: none;
+
+      width: 32px;
+      height: 16px;
+
+      color: #0F6DA1;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 769px) {
+    display: flex;
+    align-items: center;
+    column-gap: var(--container-padding-native);
+
+    &-carousel {
+      width: 100%;
+    }
+  }
+}

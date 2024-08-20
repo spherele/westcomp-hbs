@@ -1,0 +1,15 @@
+@include font-face($font-montserrat, $font-path-montserrat, 300);
+@include font-face($font-montserrat, $font-path-montserrat, 400);
+@include font-face($font-montserrat, $font-path-montserrat, 500);
+@include font-face($font-montserrat, $font-path-montserrat, 600);
+@include font-face($font-montserrat, $font-path-montserrat, 700);
+@include font-face($font-montserrat, $font-path-montserrat, 800);
+@include font-face($font-montserrat, $font-path-montserrat, 900);
+
+@include font-face($font-inter, $font-path-inter, 300);
+@include font-face($font-inter, $font-path-inter, 400);
+@include font-face($font-inter, $font-path-inter, 500);
+@include font-face($font-inter, $font-path-inter, 600);
+@include font-face($font-inter, $font-path-inter, 700);
+@include font-face($font-inter, $font-path-inter, 800);
+@include font-face($font-inter, $font-path-inter, 900);

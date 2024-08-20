@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="educational-center-page">
+      <div class="educational-center-page-hero">
+        <div class="container">
+          <div class="educational-center-page-hero-swiper">
+            <div class="educational-center-page-hero-swiper__wrapper">
+              <div class="educational-center-page-hero-swiper-slide">
+                <div class="educational-center-page-hero-swiper-slide__body">
+                  <div class="educational-center-page-hero-swiper-slide__title">Второй цикл обученияпо теме «IT безопасность»</div>
+                  <div class="educational-center-page-hero-swiper-slide__description">Пришло время записаться на наш бесплатный курспо подбору и настройке серверного оборудования HPE</div>
+                </div>
+                <img class="educational-center-page-hero-swiper-slide__image" src="../img/educational-center-hero-slide-1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="educational-center-page__title">Образовательный центр</h1>
+        <p class="educational-center-page__description">Компания WestComp открывает образовательный центр, в рамках которого будет делиться знаниями и опытом о технологиях, применяемых в серверной индустрии ведущими мировыми производителями и связанных с ними областях. О разнообразных решениях, как аппаратных, так и программных, которые позволят Вам эксплуатировать серверное оборудование с максимальной производительностью и эффективностью. Вы можете повысить профессионализм и навыки, добиться результатов, тем самым подтвердить свой высокий статус профильного специалиста! </p>
+        <div class="educational-center-page-cards">
+          <a class="course-card" href="#">
+            <div class="course-card__image-wrapper">
+              <img class="course-card__image" src="../img/course-cards/1.png" alt="" />
+            </div>
+            <div class="course-card__title">Курс HPE Gen10 и HPE Gen11 Introduction</div>
+            <div class="course-card__description">Длительность: 1 день</div>
+          </a>
+          <a class="course-card" href="#">
+            <div class="course-card__image-wrapper">
+              <img class="course-card__image" src="../img/course-cards/1.png" alt="" />
+            </div>
+            <div class="course-card__title">Курс HPE Synergy + OV introduction</div>
+            <div class="course-card__description">Длительность: 1 день</div>
+          </a>
+          <a class="course-card" href="#">
+            <div class="course-card__image-wrapper">
+              <img class="course-card__image" src="../img/course-cards/1.png" alt="" />
+            </div>
+            <div class="course-card__title">Курс 3PAR Basic Configuration</div>
+            <div class="course-card__description">Длительность: 1 день</div>
+          </a>
+          <a class="course-card" href="#">
+            <div class="course-card__image-wrapper">
+              <img class="course-card__image" src="../img/course-cards/1.png" alt="" />
+            </div>
+            <div class="course-card__title">Курс SAN Storage Area Network Introduction</div>
+            <div class="course-card__description">Длительность: 1 день</div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

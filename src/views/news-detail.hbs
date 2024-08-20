@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="news-page">
+      <div class="container">
+        <div class="news-page__sidebar">
+          {{> sections/accordion-menus }}
+        </div>
+        <div class="news-page__content">
+          <div class="news-page-header">
+            <div class="news-page-header__breadcrumbs breadcrumbs">
+              <a class="breadcrumbs__item" href="/">Главная</a>
+              <div class="breadcrumbs__separator">/</div>
+              <a class="breadcrumbs__item" href="/">Новости</a>
+              <div class="breadcrumbs__separator">/</div>
+              <span class="breadcrumbs__item breadcrumbs__item_active">График работы в майские праздники</span>
+            </div>
+          </div>
+          <div class="news-page-detail">
+            <h1 class="news-page-detail__title">График работы в майские праздники</h1>
+            <div class="news-page-detail__date">2024-04-26 15:39:31</div>
+            <div class="news-page-detail__content">
+              <p><b>Дорогие друзья!</b></p>
+              <p><b>Поздравляем Вас с наступающим праздником Днем Защитника Отечества!</b></p>
+              <p><img width="543" src="/payment/23_feb_1westcomp.jpg" height="272"></p>
+              <p>График работы компании с 22 по 25 февраля 2024 года:</p>
+              <p>22 февраля 2024 года - <b>короткий день</b>, с <b>10:00</b> – до <b>17:00</b> по Московскому времени.</p>
+              <p><b>23, 24, 25</b> февраля 2024 года - <b>выходные дни</b>, далее в обычном режиме с 10:00 - 19:00!</p>
+              <p>
+                --
+              </p>
+              <p>
+                С Уважением, команда WestComp
+              </p>
+              <p>
+                phone office in Moscow: +7 (495) 646-78-44
+              </p>
+              <p>
+                office phone in Russia: 8 (800) 100-63-63 - Звонок по России бесплатный
+              </p>
+              <p>
+                e-mail: <a href="mailto:info@westcomp.ru">info@westcomp.ru</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

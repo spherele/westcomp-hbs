@@ -1,0 +1,12 @@
+@include init-css-vars();
+
+:root {
+  --color-main: var(--black);
+  --bg-color-main: var(--white);
+
+  // swiper
+  // --swiper-theme-color: var(--primary-default);
+
+  // plyr
+  // --plyr-color-main: var(--primary-default);
+}

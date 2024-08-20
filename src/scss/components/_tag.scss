@@ -1,0 +1,82 @@
+.tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--blue);
+  padding: 12px 24px;
+  border: 1px solid var(--light-blue);
+  border-radius: 32px;
+
+  @include max-width($breakpoint-md) {
+    padding: 12px 18px;
+  }
+
+  @include max-width($breakpoint-sm) {
+    font-size: 12px;
+  }
+
+  &--accrodion {
+    padding: 0;
+
+    &.active {
+      background-color: var(--white);
+      border: 1px solid var(--blue);
+
+      .tag__head:before {
+        transform: rotate(45deg);
+      }
+    }
+
+    .tag {
+      &__head {
+        position: relative;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 37px;
+        padding-right: 37px;
+        cursor: pointer;
+
+        @include max-width($breakpoint-md) {
+          padding: 12px 45px 12px 18px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+
+          position: absolute;
+          right: 37px;
+          top: 18px;
+
+          width: 14px;
+          height: 14px;
+
+          background-image: url(../img/svg/plus.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          transition: all 0.2s linear;
+
+          @include max-width($breakpoint-md) {
+            right: 20px;
+          }
+        }
+      }
+
+      &__body {
+        &-inner {
+          padding-left: 37px;
+          padding-right: 37px;
+          padding-top: 6px;
+          padding-bottom: 23px;
+
+          @include max-width($breakpoint-md) {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.badges-container {
+  display: flex;
+
+  .badge {
+    &:first-child {
+      clip-path: polygon(0 0, 100% 0, calc(100% - 5px) 100%, 0% 100%);
+    }
+
+    &:not(:first-child) {
+      clip-path: polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%);
+    }
+  }
+}
+
+.badge {
+  padding: 5px 15px;
+  width: fit-content;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: #FFF;
+
+  &_green {
+    background-color: #2FAE96;
+  }
+
+  &_pink {
+    background-color: #DC3D93;
+  }
+
+  &_blue {
+    background-color: #0091D0;
+  }
+
+  &_purple {
+    background-color: #9E16F1;
+  }
+
+  &_yellow {
+    background-color: #F1B416;
+  }
+
+  &_dark-blue {
+    background-color: #0053D0;
+  }
+}

@@ -1,0 +1,41 @@
+[data-tippy-template] {
+  display: none;
+}
+
+[data-tippy-root] {
+  .dropdown__content {
+    position: static;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+    transform: none;
+  }
+}
+
+// default
+.tippy-box {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: inherit;
+  background-color: var(--white);
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(var(--black-rgb), 0.25);
+}
+
+.tippy-content {
+  padding: 0.5rem 0.75rem;
+}
+
+.tippy-arrow {
+  color: var(--white);
+}
+
+// custom
+// .tooltip-wrapper {
+//   ...
+//
+//   &--example {
+//
+//   }
+// }

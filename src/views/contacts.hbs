@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="contacts-page">
+      <div class="container">
+        <div class="contacts__breadcrumbs breadcrumbs">
+          <a class="breadcrumbs__item" href="/">Главная</a>
+          <div class="breadcrumbs__separator">/</div>
+          <span class="breadcrumbs__item breadcrumbs__item_active">Контактная информация</span>
+        </div>
+        <h1 class="contacts-page__title">Контактная информация</h1>
+        <div class="contacts-page-card">
+          <div class="contacts-page-card__items">
+            <div class="contacts-page-card-item">
+              <div class="contacts-page-card-item__title">Наш адрес</div>
+              <div class="contacts-page-card-item__subtitle">127550 г. Москва, ул. Прянишникова, дом 23а</div>
+              <div class="contacts-page-card-item__description">
+                <div class="contacts-page-card-item__description-column">
+                  График работы: Пн-Пт с 10:00 до 19:00. Суббота, воскресенье – выходные дни.
+                </div>
+                <div class="contacts-page-card-item__description-separator"></div>
+                <div class="contacts-page-card-item__description-column">
+                  В праздничные дни – по специальному графику, публикуется в разделе <a href="#">Информация</a> накануне.
+                </div>
+              </div>
+            </div>
+            <div class="contacts-page-card-item">
+              <div class="contacts-page-card-item__title">Телефоны</div>
+              <div class="contacts-page-card-item__description">+7 (495) 646-78-44 (многоканальный) 8 (800) 100-63-63 (многоканальный) «Звонок по России бесплатный»</div>
+            </div>
+            <div class="contacts-page-card-item">
+              <div class="contacts-page-card-item__title">E-mail</div>
+              <div class="contacts-page-card-item__description">info@westcomp.ru</div>
+            </div>
+          </div>
+          <div class="contacts-page-card__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3A16af908d8f928f4d75b7cfe2295485ca7538ae497edc449421192ea1800179ee"></iframe>
+          </div>
+        </div>
+      </div>
+      {{> sections/more-about-us }}
+      {{> sections/configurator }}
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

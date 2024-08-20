@@ -1,0 +1,94 @@
+.video {
+  position: relative;
+  // padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  // height: 0;
+  // overflow: hidden;
+
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+    border-radius: 64px;
+
+    @include max-width($breakpoint-sm) {
+      border-radius: 24px;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      .youtube-video__placeholder-play {
+        background-color: var(--white);
+
+        svg path {
+          fill: var(--pale-red);
+        }
+      }
+    }
+
+    &-img {
+      width: 100%;
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+    }
+
+    &-play {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--white);
+
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+
+      z-index: 1;
+      transition: all 0.2s linear;
+
+      @include max-width($breakpoint-sm) {
+        width: 46px;
+        height: 46px;
+      }
+
+      svg {
+        width: 38px;
+        height: 38px;
+        margin: auto auto auto 32px;
+
+        @include max-width($breakpoint-sm) {
+          width: 22px;
+          height: 22px;
+          margin: auto auto auto 14px;
+        }
+      }
+    }
+  }
+
+  &__video-player {
+    display: block;
+    width: 100%;
+  }
+}

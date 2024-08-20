@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="configurator-product-page">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__item" href="/">Главная</a>
+          <div class="breadcrumbs__separator">/</div>
+          <a class="breadcrumbs__item" href="#">Конфигуратор</a>
+          <div class="breadcrumbs__separator">/</div>
+          <span class="breadcrumbs__item breadcrumbs__item_active">HPE Proliant DL360e Gen8 8xSFF</span>
+        </div>
+        <h1 class="configurator-product-page__title">HPE Proliant DL360e Gen8 8xSFF</h1>
+        <div class="configurator-product-page__wrapper">
+          <div class="configurator-product-page__content">
+            <div class="configurator-product">
+              <img class="configurator-product__image" src="https://placehold.co/600x400" alt="">
+              <div class="configurator-product-carousel-wrapper">
+                <button class="configurator-product-carousel-wrapper__button configurator-product-carousel-wrapper__button_previous" type="button">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 21L24 32L35 43" stroke="currentColor " stroke-width="2"></path>
+                  </svg>
+                </button>
+                <div class="configurator-product-carousel">
+                  <div class="configurator-product-carousel__wrapper">
+                    <img class="configurator-product-carousel__slide" src="https://placehold.co/600x400" alt="">
+                    <img class="configurator-product-carousel__slide" src="https://placehold.co/600x400" alt="">
+                    <img class="configurator-product-carousel__slide" src="https://placehold.co/600x400" alt="">
+                    <img class="configurator-product-carousel__slide" src="https://placehold.co/600x400" alt="">
+                    <img class="configurator-product-carousel__slide" src="https://placehold.co/600x400" alt="">
+                  </div>
+                </div>
+                <button class="configurator-product-carousel-wrapper__button configurator-product-carousel-wrapper__button_next" type="button">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29 21L40 32L29 43" stroke="currentColor" stroke-width="2"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="configurator-product-cards">
+              <div class="configurator-product-cards-header">
+                <button class="configurator-product-cards-header__reset-button" type="reset"> Сбросить</button>
+              </div>
+              <div class="configurator-product-card">
+                <div class="configurator-product-card-header">
+                  <div class="configurator-product-card-header__wrapper">
+                    <div class="configurator-product-card-header-title">
+                      <div class="configurator-product-card-header-title__text">Память</div>
+                      <div class="configurator-product-card-header-title__tooltip tooltip"></div>
+                    </div>
+                    <div class="configurator-product-card-header__subtitle">Максимальное кол-во модулей памяти: 24</div>
+                  </div>
+                  <div class="configurator-product-card-header-options">
+                    <div class="configurator-product-card-header-options__item">2 / 24 шт.</div>
+                    <div class="configurator-product-card-header-options__item">32 GB</div>
+                  </div>
+                </div>
+                <div class="configurator-product-card__body">
+                  123
+                </div>
+              </div>
+              <div class="configurator-product-cards-footer">
+                Итого за вашу конфигурацию: 76 134,9 ₽
+              </div>
+            </div>
+          </div>
+          <div class="configurator-product-page__sidebar">
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

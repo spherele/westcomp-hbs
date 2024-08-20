@@ -1,0 +1,185 @@
+.configurator {
+  overflow: hidden;
+
+  &__inner {
+    padding-top: 68px;
+    padding-bottom: 84px;
+
+    @include max-width($breakpoint-md) {
+      padding-top: 46px;
+    }
+
+    @include max-width($breakpoint-sm) {
+      padding-top: 24px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 40px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+
+    span {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px;
+      color: var(--gray-500);
+      margin: 0 20px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 34px;
+    text-align: center;
+    color: var(--blue);
+    margin: 0 0 18px;
+
+    @include max-width($breakpoint-lg) {
+      padding-left: 140px;
+      padding-right: 140px;
+    }
+
+    @include max-width($breakpoint-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @include max-width($breakpoint-sm) {
+      font-size: 22px;
+      line-height: 30px;
+
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__descr {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+    color: var(--blue);
+
+    @include max-width($breakpoint-lg) {
+      max-width: 500px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include max-width($breakpoint-md) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include max-width($breakpoint-sm) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__buttons {
+    @include max-width($breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 8px;
+    }
+
+    @include max-width($breakpoint-sm) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    @include max-width($breakpoint-sm) {
+      font-size: 14px;
+    }
+
+    &--configurator {
+      padding-left: 72px;
+      padding-right: 72px;
+
+      @include max-width($breakpoint-sm) {
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 16px;
+
+        max-width: 380px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 120px;
+    bottom: 0;
+
+    @include max-width($breakpoint-xl) {
+      right: 40px;
+    }
+
+    @include max-width($breakpoint-sm) {
+      right: -45px;
+    }
+
+    &--big-gear {
+      left: -50px;
+      top: 30px;
+      z-index: 1;
+      animation: infinite spinner-2 16s linear;
+
+      @include max-width($breakpoint-xxl) {
+        left: -155px;
+      }
+
+      @include max-width($breakpoint-xl) {
+        top: 120px;
+      }
+
+      @include max-width($breakpoint-sm) {
+        top: -15px;
+        left: -215px;
+      }
+    }
+  }
+
+  &--decor-2 &__inner {
+    position: relative;
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      right: -45px;
+      top: 0;
+
+      height: 100px;
+      width: 104px;
+
+      background-image: url(../img/gear-blur.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include max-width($breakpoint-sm) {
+        right: -60px;
+        top: -25px;
+      }
+    }
+  }
+}

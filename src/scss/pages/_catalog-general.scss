@@ -1,0 +1,82 @@
+.catalog-general-page {
+  padding-block: 40px;
+  background-color: #f0f9ff;
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__title {
+    margin-block: 0;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #0f6da1;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include max-width(1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include max-width(768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include max-width(600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-card {
+    display: flex;
+    aspect-ratio: 2;
+
+    padding: 25px;
+    border-radius: 32px;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+
+    &__text {
+      color: #000;
+      max-width: 58%;
+
+      &_top-right {
+        margin-left: auto;
+        margin-bottom: auto;
+        text-align: right;
+      }
+
+      &_top-left {
+        margin-right: auto;
+        margin-bottom: auto;
+        text-align: left;
+      }
+
+      &_bottom-right {
+        margin-top: auto;
+        margin-left: auto;
+        text-align: right;
+      }
+
+      &_bottom-left {
+        margin-right: auto;
+        margin-top: auto;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.educational-center-page {
+  > .container {
+    padding-block: 75px;
+
+    @include max-width(600px) {
+      padding-block: 35px;
+    }
+  }
+
+  &-hero {
+    padding-block: 110px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/educational-center-hero.png');
+
+    @include max-width(601px) {
+      padding-block: 50px;
+    }
+
+    &-swiper {
+      overflow-x: hidden;
+
+      &__wrapper {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      &-slide {
+        display: flex;
+        flex-shrink: 0;
+
+        column-gap: 120px;
+        align-items: center;
+        justify-content: space-between;
+
+        @include max-width(1336px) {
+          flex-direction: column;
+        }
+
+        &__body {
+          color: #FFF;
+        }
+
+        &__title {
+          font-size: 52px;
+          font-weight: 900;
+
+          @include max-width(601px) {
+            font-size: 24px;
+          }
+        }
+
+        &__description {
+          margin-top: 52px;
+          font-size: 22px;
+
+          @include max-width(1336px) {
+            margin-top: 15px;
+          }
+
+          @include max-width(601px) {
+            font-size: 18px;
+          }
+        }
+
+        &__image {
+          flex-shrink: 0;
+
+          height: 512px;
+          aspect-ratio: 1.25;
+          object-fit: cover;
+
+          border-radius: 20px;
+
+          @include max-width(1336px) {
+            margin-top: 15px;
+          }
+
+          @include max-width(601px) {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-block: 0;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #0F6DA1;
+  }
+
+  &__description {
+    margin-top: 25px;
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 15px;
+    margin-top: 35px;
+
+    @include max-width(1336px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include max-width(960px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include max-width(600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

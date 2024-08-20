@@ -1,0 +1,46 @@
+.form {
+  &-configurator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      color: #0F6DA1;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      text-align: center;
+      color: #636363;
+    }
+
+    &__input {
+      width: 75%;
+
+      display: block;
+      padding: 15px 20px;
+
+      font: inherit;
+      border-radius: 5px;
+
+      outline: none;
+      border: 1px solid #B2BECB;
+
+      color: inherit;
+      background-color: transparent;
+
+      &::placeholder {
+        opacity: 1;
+        color: #838F9C;
+      }
+    }
+
+    &__button {
+      width: 75%;
+    }
+  }
+}

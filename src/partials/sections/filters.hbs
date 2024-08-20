@@ -1,0 +1,78 @@
+<div class="filters">
+  <div class="filters-category">
+    <div class="filters-category__title">Производитель</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="HP"}}
+      {{> components/filters-checkbox title="DELL"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Тип шасси</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="SFF"}}
+      {{> components/filters-checkbox title="LFF"}}
+      {{> components/filters-checkbox title="NVME"}}
+      {{> components/filters-checkbox title="SSD"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Тип сервера</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="Tower"}}
+      {{> components/filters-checkbox title="Rackmount"}}
+      {{> components/filters-checkbox title="Blade"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Форм-Фактор</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="1U"}}
+      {{> components/filters-checkbox title="2U"}}
+      {{> components/filters-checkbox title="4U"}}
+      {{> components/filters-checkbox title="Tower"}}
+      {{> components/filters-checkbox title="Blade"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Семейство процессоров</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="Intel Xeon E5-2600v1/v2"}}
+      {{> components/filters-checkbox title="Intel Xeon E5-2600v3/v4"}}
+      {{> components/filters-checkbox title="Intel Xeon Scalable"}}
+      {{> components/filters-checkbox title="Intel Xeon E Processors"}}
+      {{> components/filters-checkbox title="Intel Xeon E3-1200v5/v6"}}
+      {{> components/filters-checkbox title="Intel Xeon E5-2400v1/v2"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Тип памяти</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="DDR3"}}
+      {{> components/filters-checkbox title="DDR4"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Доступность</div>
+    <div class="filters-category__items">
+      {{> components/filters-checkbox title="В наличии"}}
+      {{> components/filters-checkbox title="С ожиданием"}}
+    </div>
+  </div>
+  <div class="filters__separator"></div>
+  <div class="filters-category">
+    <div class="filters-category__title">Цена</div>
+    <div class="filters-category__items">
+      <div class="filters-price" data-from="30000" data-to="100000">
+        <input class="filters-price__input filters-price__input_from" type="number">
+        <input class="filters-price__input filters-price__input_to" type="number">
+        <div class="filters-price__range"></div>
+      </div>
+    </div>
+  </div>
+</div>

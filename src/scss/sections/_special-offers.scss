@@ -1,0 +1,87 @@
+.special-offers {
+  padding-top: 55px;
+  padding-bottom: 0;
+  overflow: hidden;
+  background: url(../img/svg/backlineall.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top center;
+
+  @include max-width($breakpoint-sm) {
+    padding-top: 24px;
+  }
+
+  &__slider {
+    @include max-width($breakpoint-lg) {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+
+    .swiper {
+      padding: 25px 0 90px;
+
+      @include max-width($breakpoint-lg) {
+        padding: 25px 0 82px 15px;
+      }
+    }
+
+    .swiper-slide {
+      @include max-width($breakpoint-lg) {
+        width: 405px;
+      }
+
+      @include max-width($breakpoint-md) {
+        width: 375px;
+      }
+
+      @include max-width($breakpoint-sm) {
+        width: 290px;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    min-height: 64px;
+
+    @include max-width($breakpoint-md) {
+      margin-bottom: 36px;
+      min-height: auto;
+    }
+
+    @include max-width($breakpoint-sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 41px;
+    color: var(--white);
+
+    @include max-width($breakpoint-sm) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  &__buttons-control {
+    position: relative;
+    min-height: 64px;
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      margin: 0;
+    }
+  }
+}

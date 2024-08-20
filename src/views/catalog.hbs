@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="catalog-page">
+      <div class="container">
+        <div class="catalog-page__sidebar">
+          {{!-- {{> sections/filters }} --}}
+          {{> sections/accordion-menus }}
+        </div>
+        <div class="catalog-page__content">
+          <div class="catalog-page-header">
+            <div class="catalog-page-header__breadcrumbs breadcrumbs">
+              <a class="breadcrumbs__item" href="/">Главная</a>
+              <div class="breadcrumbs__separator">/</div>
+              <a class="breadcrumbs__item" href="#">Каталог</a>
+              <div class="breadcrumbs__separator">/</div>
+              <span class="breadcrumbs__item breadcrumbs__item_active">Серверы HPE Proliant DL</span>
+            </div>
+            <h1 class="catalog-page-header__title">Серверы HPE Proliant DL</h1>
+          </div>
+          <div class="products-cards-slider">
+            <div class="products-cards-slider__wrapper">
+              <div class="products-cards-slider-header">
+                <div class="products-cards-slider-header__title">Конфигураторы</div>
+                <div class="products-cards-slider-header-buttons">
+                  <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_previous">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 1L2 12L13 23" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_next">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L12 12L1 23" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider-body">
+                <div class="products-cards-slider-body__wrapper">
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products-cards-slider">
+            <div class="products-cards-slider__wrapper">
+              <div class="products-cards-slider-header">
+                <div class="products-cards-slider-header__title">Конфигураторы</div>
+                <div class="products-cards-slider-header-buttons">
+                  <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_previous">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 1L2 12L13 23" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_next">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L12 12L1 23" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider-body">
+                <div class="products-cards-slider-body__wrapper">
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-cards-slider__slide">
+                    <div class="card-product">
+                      <div class="card-product__inner">
+                        <div class="card-product__head" data-card-action-bar>
+                          <a href="#" class="card-product__action" data-card-action-btn>
+                            {{> ui/svg id="graph" }}
+                          </a>
+                          <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                            {{> ui/svg id="favorite-2" }}
+                          </a>
+                        </div>
+                        <div class="card-product__body">
+                          <div class="card-product__img">
+                            <img src="@src/img/product-1.png" alt="" />
+                          </div>
+                          <div class="card-product__info">
+                            <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                            <div class="card-product__descr">
+                              12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-product__footer">
+                          <div class="card-product__price">6 900 ₽</div>
+                          <div class="card-product__buttons">
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                            <a href="#" class="card-product__button card-product__button--plus-decor">
+                              <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-page__accordion-menus-mobile container">
+            {{> sections/accordion-menus }}
+          </div>
+          <div class="catalog catalog_list">
+            <div class="catalog-header">
+              <div class="catalog-header-sort">
+                <div class="catalog-header-sort__item">
+                  <select id="sort-by-date" class="select button button-select" size="1" data-select='{"placeholder": "По новизне"}'>
+                    <option value="newest">Сначала новые</option>
+                    <option value="oldest">Сначала старые</option>
+                  </select>
+                </div>
+                <div class="catalog-header-sort__item">
+                  <select id="sort-by-price" class="select button button-select" size="1" data-select='{"placeholder": "По цене"}'>
+                    <option value="newest">Сначала дешёвые</option>
+                    <option value="oldest">Сначала дорогие</option>
+                  </select>
+                </div>
+                <div class="catalog-header-sort__item">
+                  <select id="sort-by-popularity" class="select button button-select" size="1" data-select='{"placeholder": "По популярности"}'>
+                    <option value="newest">Сначала популярные</option>
+                    <option value="oldest">Сначала непопулярные</option>
+                  </select>
+                </div>
+              </div>
+              <div class="catalog-header-view-buttons">
+                <button class="catalog-header-view-buttons__item catalog-header-view-buttons__item_grid" type="button">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="10" height="10" rx="3" fill="currenColor" />
+                    <rect y="12" width="10" height="10" rx="3" fill="currentColor" />
+                    <rect x="12" width="10" height="10" rx="3" fill="currentColor" />
+                    <rect x="12" y="12" width="10" height="10" rx="3" fill="currenColor" />
+                  </svg>
+                </button>
+                <button class="catalog-header-view-buttons__item catalog-header-view-buttons__item_list catalog-header-view-buttons__item_active" type="button">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="22" height="10" rx="3" fill="currenColor" />
+                    <rect y="12" width="22" height="10" rx="3" fill="currenColor" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="catalog__items">
+              <div class="card-product">
+                <div class="badges-container">
+                  <div class="badge badge_green">скидка</div>
+                  <div class="badge badge_purple">$100</div>
+                  <div class="badge badge_yellow">ТОП</div>
+                </div>
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-product">
+                <div class="card-product__inner">
+                  <div class="card-product__head" data-card-action-bar>
+                    <a href="#" class="card-product__action" data-card-action-btn>
+                      {{> ui/svg id="graph" }}
+                    </a>
+                    <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                      {{> ui/svg id="favorite-2" }}
+                    </a>
+                  </div>
+                  <div class="card-product__body">
+                    <div class="card-product__img">
+                      <img src="@src/img/product-1.png" alt="" />
+                    </div>
+                    <div class="card-product__info">
+                      <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                      <div class="card-product__descr">
+                        12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-product__footer">
+                    <div class="card-product__price-wrapper">
+                      <div class="card-product__warranty">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.3 8.45439L7.2184 10.3728L10.6542 6.93698M7.97712 0.899902L1.25 3.69293V7.08823C1.25 11.4823 3.90889 15.4394 7.97712 17.0999C12.0453 15.4394 14.7042 11.4823 14.7042 7.08823V3.69293L7.97712 0.899902Z" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        3 года
+                      </div>
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__tax">в том числе НДС 20%</div>
+                    </div>
+                    <div class="card-product__buttons">
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                      <a href="#" class="card-product__button card-product__button--plus-decor">
+                        <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-pagination">
+              <span class="catalog-pagination__item catalog-pagination__item_active">1</span>
+              <a class="catalog-pagination__item" href="#">2</a>
+              <a class="catalog-pagination__item" href="#">3</a>
+              <a class="catalog-pagination__item" href="#">4</a>
+              <a class="catalog-pagination__item" href="#">5</a>
+              <a class="catalog-pagination__button" href="#">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 10.5L6 6L1 1.5" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="products-cards-slider products-cards-slider_special-offers">
+        <div class="container">
+          <div class="products-cards-slider-header">
+            <div class="products-cards-slider-header__title">Специальные предложения</div>
+            <div class="products-cards-slider-header-buttons">
+              <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_previous">
+                <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 1L2 12L13 23" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <div class="products-cards-slider-header-buttons__item products-cards-slider-header-buttons__item_next">
+                <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L12 12L1 23" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="products-cards-slider-body">
+            <div class="products-cards-slider-body__wrapper">
+              <div class="products-cards-slider__slide">
+                <div class="card-product">
+                  <div class="card-product__inner">
+                    <div class="card-product__head" data-card-action-bar>
+                      <a href="#" class="card-product__action" data-card-action-btn>
+                        {{> ui/svg id="graph" }}
+                      </a>
+                      <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                        {{> ui/svg id="favorite-2" }}
+                      </a>
+                    </div>
+                    <div class="card-product__body">
+                      <div class="card-product__img">
+                        <img src="@src/img/product-1.png" alt="" />
+                      </div>
+                      <div class="card-product__info">
+                        <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                        <div class="card-product__descr">
+                          12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product__footer">
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__buttons">
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider__slide">
+                <div class="card-product">
+                  <div class="card-product__inner">
+                    <div class="card-product__head" data-card-action-bar>
+                      <a href="#" class="card-product__action" data-card-action-btn>
+                        {{> ui/svg id="graph" }}
+                      </a>
+                      <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                        {{> ui/svg id="favorite-2" }}
+                      </a>
+                    </div>
+                    <div class="card-product__body">
+                      <div class="card-product__img">
+                        <img src="@src/img/product-1.png" alt="" />
+                      </div>
+                      <div class="card-product__info">
+                        <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                        <div class="card-product__descr">
+                          12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product__footer">
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__buttons">
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider__slide">
+                <div class="card-product">
+                  <div class="card-product__inner">
+                    <div class="card-product__head" data-card-action-bar>
+                      <a href="#" class="card-product__action" data-card-action-btn>
+                        {{> ui/svg id="graph" }}
+                      </a>
+                      <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                        {{> ui/svg id="favorite-2" }}
+                      </a>
+                    </div>
+                    <div class="card-product__body">
+                      <div class="card-product__img">
+                        <img src="@src/img/product-1.png" alt="" />
+                      </div>
+                      <div class="card-product__info">
+                        <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                        <div class="card-product__descr">
+                          12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product__footer">
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__buttons">
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider__slide">
+                <div class="card-product">
+                  <div class="card-product__inner">
+                    <div class="card-product__head" data-card-action-bar>
+                      <a href="#" class="card-product__action" data-card-action-btn>
+                        {{> ui/svg id="graph" }}
+                      </a>
+                      <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                        {{> ui/svg id="favorite-2" }}
+                      </a>
+                    </div>
+                    <div class="card-product__body">
+                      <div class="card-product__img">
+                        <img src="@src/img/product-1.png" alt="" />
+                      </div>
+                      <div class="card-product__info">
+                        <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                        <div class="card-product__descr">
+                          12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product__footer">
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__buttons">
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="products-cards-slider__slide">
+                <div class="card-product">
+                  <div class="card-product__inner">
+                    <div class="card-product__head" data-card-action-bar>
+                      <a href="#" class="card-product__action" data-card-action-btn>
+                        {{> ui/svg id="graph" }}
+                      </a>
+                      <a href="#" class="card-product__action card-product__action--favorite" data-card-action-btn>
+                        {{> ui/svg id="favorite-2" }}
+                      </a>
+                    </div>
+                    <div class="card-product__body">
+                      <div class="card-product__img">
+                        <img src="@src/img/product-1.png" alt="" />
+                      </div>
+                      <div class="card-product__info">
+                        <a href="#" class="card-product__name" title="HPE Synergy D3940 12Gb">HPE Synergy D3940 12Gb</a>
+                        <div class="card-product__descr">
+                          12GB SAS Drive Enclosure with 40 SFF (2.5in) Drive Bays
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product__footer">
+                      <div class="card-product__price">6 900 ₽</div>
+                      <div class="card-product__buttons">
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="cart" class="cart" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                        <a href="#" class="card-product__button card-product__button--plus-decor">
+                          <span> {{> ui/svg id="gear" class="gear" }} {{> ui/svg id="plus" class="plus" }} </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>

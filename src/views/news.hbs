@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+<head>
+  {{> layouts/head }}
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="content">
+    {{> layouts/header }}
+
+    <main class="news-page">
+      <div class="container">
+        <div class="news-page__sidebar">
+          {{> sections/accordion-menus }}
+        </div>
+        <div class="news-page__content">
+          <div class="news-page-header">
+            <div class="news-page-header__breadcrumbs breadcrumbs">
+              <a class="breadcrumbs__item" href="/">Главная</a>
+              <div class="breadcrumbs__separator">/</div>
+              <span class="breadcrumbs__item breadcrumbs__item_active">Новости</span>
+            </div>
+            <h1 class="news-page-header__title">Новости</h1>
+          </div>
+          <div class="news-page__cards">
+            <a class="news-page-card" href="#">
+              <img class="news-page-card__image" src="../img/hero-slide-bg-1.jpg" alt="">
+              <div class="news-page-card__body">
+                <div class="news-page-card__date">2024-04-26</div>
+                <div class="news-page-card__title">8 Марта 2024 - график работы WestComp</div>
+              </div>
+            </a>
+            <a class="news-page-card" href="#">
+              <img class="news-page-card__image" src="../img/hero-slide-bg-1.jpg" alt="">
+              <div class="news-page-card__body">
+                <div class="news-page-card__date">2024-04-26</div>
+                <div class="news-page-card__title">8</div>
+              </div>
+            </a>
+            <a class="news-page-card" href="#">
+              <img class="news-page-card__image" src="../img/hero-slide-bg-1.jpg" alt="">
+              <div class="news-page-card__body">
+                <div class="news-page-card__date">2024-04-26</div>
+                <div class="news-page-card__title">8 Марта 2024 - график работы WestComp</div>
+              </div>
+            </a>
+            <a class="news-page-card" href="#">
+              <img class="news-page-card__image" src="../img/hero-slide-bg-1.jpg" alt="">
+              <div class="news-page-card__body">
+                <div class="news-page-card__date">2024-04-26</div>
+                <div class="news-page-card__title">8 Марта 2024 - график работы WestComp</div>
+              </div>
+            </a>
+            <a class="news-page-card" href="#">
+              <img class="news-page-card__image" src="../img/hero-slide-bg-1.jpg" alt="">
+              <div class="news-page-card__body">
+                <div class="news-page-card__date">2024-04-26</div>
+                <div class="news-page-card__title">8 Марта 2024 - график работы WestComp</div>
+              </div>
+            </a>
+          </div>
+          <div class="news-page__pagination pagination">
+            <a class="pagination__button" href="#">
+              <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" transform="scale(-1, 1)">
+                <path d="M1 10.5L6 6L1 1.5" stroke="currentColor" stroke-width="1.8"></path>
+              </svg>
+            </a>
+            <a class="pagination__item pagination__item_active" href="#">5</a>
+            <a class="pagination__item" href="#">6</a>
+            <a class="pagination__item" href="#">7</a>
+            <a class="pagination__item" href="#">8</a>
+            <a class="pagination__item" href="#">9</a>
+            <a class="pagination__button" href="#">
+              <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 10.5L6 6L1 1.5" stroke="currentColor" stroke-width="1.8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> layouts/footer }}
+  </div>
+
+  {{> layouts/modals }}
+  {{> layouts/tooltips }}
+</body>
+</html>
